@@ -17,8 +17,8 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ![Arquivo PDF da Documentação de requisitos](https://github.com/ViniciusHora1009/trabalho_bd1/blob/master/arquivos/Documenta%C3%A7%C3%A3o%20de%20Requisitos.pdf)<br>
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-![Alt text](https://github.com/ViniciusHora1009/trabalho_bd1/blob/master/images/tela_doacao.PNG "Doação")<br>
-![Arquivo PDF do Protótipo Balsamiq feito para o sistema](https://github.com/ViniciusHora1009/trabalho_bd1/blob/master/arquivos/Prototipo.pdf "App Doações")<br>
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/tela_doacao.PNG "Doação")<br>
+![Arquivo PDF do Protótipo Balsamiq feito para o sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Prototipo.pdf "App Doações")<br>
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
@@ -41,7 +41,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
-![Alt text](https://github.com/ViniciusHora1009/trabalho_bd1/blob/master/images/conceitual1-v3.jpg "Modelo Conceitual")
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual1-v3.jpg "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
