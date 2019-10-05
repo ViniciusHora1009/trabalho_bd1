@@ -104,12 +104,35 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         ID_STATUS: Campo que armazena o código de identificação de um status da requisição.<br>
         NOME: Campo que armazena o nome do status da requisição.<br>
    
-    MENSAGEM_REQUISICAO: Tabela que armazena as informações relativa às mensagem trocadas pelos usuários em sua negociação numa requisição de doação.<br>
+    MENSAGEM_REQUISICAO: Tabela que armazena as informações relativas às mensagem trocadas pelos usuários em sua negociação numa requisição de doação.<br>
+        ID_MENSAGEM: Campo que armazena o código de identificação de uma mensagem.<br>
+        CONTEUDO: Campo que armazena o conteúdo da mensagem.<br>
+        DATA_HORARIO: Campo que armazena a data e hora de envio de uma mensagem. <br>
         
+    STATUS_MENSAGEM: Tabela que armazena as informações sobre o Status da mensagem.<br>
+        ID_STATUS: Campo que armazena o código de identificação do status da mensagem.<br>
+        NOME: Campo que armazena o nome do status da mensagem.<br>
         
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    NECESSIDADE: Tabela que armazena as informações relativas às necessidades divulgadas pelos usuários (ONG ou pessoa).<br>
+        ID_NECESSIDADE: Campo que armazena o código de identificação de uma necessidade.<br>
+        TITULO: Campo que armazena o título indentificador de uma necessidade.<br>
+        DESCRICAO: Campo que armazena a descrição (texto) referente a uma necessidade.
+        VALOR: Campo que armazena o valor a ser recompensado pela ajuda ao necessitando.<br>
+        
+    REQUISICAO_AJUDA: Tabela que armazena as informações relativa a requisição de ajuda em uma necessidade de um usuário.<br>
+    
+    STATUS_REQ_NECESSIDADE: Tabela que armazena as informações relativa a ao status de uma requisição de necessidade, qual a situação dela no momento.<br>
+        ID_STATUS: Campo que armazena o código de identificação de um status da requisição.<br>
+        NOME: Campo que armazena o nome do status da requisição.<br>
+   
+    MENSAGEM_NECESSIDADE: Tabela que armazena as informações relativas às mensagem trocadas pelos usuários em sua negociação numa requisição de ajuda a uma necessidade.<br>
+        ID_MENSAGEM: Campo que armazena o código de identificação de uma mensagem.<br>
+        CONTEUDO: Campo que armazena o conteúdo da mensagem.<br>
+        DATA_HORA: Campo que armazena a data e hora de envio de uma mensagem. <br>
+    
+    STATUS_MENSAGEM_NEC: Tabela que armazena as informações sobre o Status da mensagem de no chat da necessidade.<br>
+        ID_STATUS: Campo que armazena o código de identificação do status da mensagem.<br>
+        NOME: Campo que armazena o nome do status da mensagem.<br>
 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema     
     a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
