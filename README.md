@@ -72,8 +72,41 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         LONGITUDE: Campo que armazena o longitude da localização de cada ONG usuária do sistema.<br>
         NUM_CONTATO: Campo que armazena o número de contato de cada ONG usuária do sistema.<br>
         NOME: Campo que armazena o nome de cada ONG usuária do sistema.<br>
-        
     
+    AVALIACAO_USUARIO: Tabela que armazena informações relativa as avaliações recebidas por um usuário (pessoa física).<br>
+        ID_AVALIACAO: Campo que armazena o código de identificação de cada avaliação feita por alguém.<br>
+        NOTA: Campo que armazena a nota de 0 a 5 de uma avaliação criada.<br>
+        COMENTARIO: Campo que armazena o conteúdo do comentário (texto) de uma avaliação.<br>
+    
+    ITEM_DOACAO: Tabela que armazena as informações relativa a uma doação cadastrada.<br>
+        ID_DOACAO: Campo que armazena o código de identificação de uma doação cadastrada.<br>
+        TITULO: Campo que armazena o título identificador que o usuário escreveu para sua doação.<br>
+        DESCRICAO: Campo que armazena o a descrição (texto) que o usuário escreveu sobre sua doação.<br>
+        LATITUDE: Campo que armazena a latitude do local onde a doação será concretizada.<br>
+        LONGITUDE: Campo que armazena a longitude do local onde a doação será concretizada.<br>
+    
+    CATEGORIA: Tabela que armazena as informações relativa as categorias dos items que serão doados.<br>
+        ID_CATEGORIA: Campo que armazena o código de identificação de uma categoria de item.<br>
+        NOME: Campo que armazena o nome de uma categoria.<br>
+        VALOR_MEDIO: Campo que armazena o valor possível para uma categoria com item em condições normais.<br>
+        
+    FOTO: Tabela que armazena as informações relativa às fotos vinculadas a uma doação.<br>
+        ID_FOTO: Campo que armazena o código de identificação de uma foto.<br>
+        NOME_ARQUIVO: Campo que armazena o nome do arquivo da foto.<br>
+        
+    ESTADO_ITEM: Tabela que armazena as informações relativa ao estado de conservação de um item a ser doado.<br>
+        ID_ESTADO: Campo que armazena o código de identificação de um estado de conservação de um item.<br>
+        NOME: Campo que armazena o nome de um estado de conservação de um item.<br>
+       
+    REQUISICAO_DOACAO: Tabela que armazena as informações relativa a requisição de retirada em uma doação de um usuário para outro.<br> 
+    
+    STATUS_REQUISICAO: Tabela que armazena as informações relativa a ao status de uma requisiçã, qual a situação dela no momento.<br>
+        ID_STATUS: Campo que armazena o código de identificação de um status da requisição.<br>
+        NOME: Campo que armazena o nome do status da requisição.<br>
+   
+    MENSAGEM_REQUISICAO: Tabela que armazena as informações relativa às mensagem trocadas pelos usuários em sua negociação numa requisição de doação.<br>
+        
+        
     EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
