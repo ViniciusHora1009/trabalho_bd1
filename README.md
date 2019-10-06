@@ -41,7 +41,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual1-v3.jpg "Modelo Conceitual")
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual_atualizadov1.png "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
@@ -57,7 +57,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 #### 5.2 Descrição dos dados 
     PESSOA: Tabela que armazena informações relativa a pessoa física.<br>
-        ID_USUARIO: Campo que armazena o código de identificação de cada pessoa usuária do sistema.<br>
+        ID_PESSOA: Campo que armazena o código de identificação de cada pessoa usuária do sistema.<br>
         NUM_CELULAR: Campo que armazena o número do celular de cada pessoa usuária do sistema.<br>
         EMAIL: Campo que armazena o endereço de email de cada pessoa usuária do sistema.<br>
         DATA_NASCIMENTO: Campo que armazena a data de nascimento de cada pessoa usuária do sistema.<br>
@@ -140,9 +140,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico_atualizadov1.png "Modelo Conceitual")
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
