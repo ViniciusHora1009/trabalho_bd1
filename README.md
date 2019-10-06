@@ -42,6 +42,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual_atualizadov1.png "Modelo Conceitual")
+![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual_atualizadov1.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
@@ -141,12 +142,12 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico_atualizadov1.png "Modelo Conceitual")
+![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logico_atualizadov1.brM3 "Modelo físico")<br>
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas DDL 
-        (criação de tabelas, alterações, etc..) 
+![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/fisico_atualizadov1.sql "Modelo físico")<br>
         
->## Marco de Entrega 01 em: 07/09/2019<br>
+>## Marco de Entrega 01 em: 07/10/2019<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
