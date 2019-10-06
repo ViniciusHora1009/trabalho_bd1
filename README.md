@@ -23,12 +23,12 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
-* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
-* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
-* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
-* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
+> O sistema deverá gerar os seguintes relatórios:
+* Relatório que informe todas as necessidades já divulgadas no sistema por determinado usuário.
+* Relatório que informe todas as doações já realizadas no sistema por determinado usuário.
+* Relatório que informe todos os comentários realizados em cada doação já divulgada.
+* Relatório de usuários "pessoa" incluino as seguintes informações: ID do usuário, nome do usuário, número de contato do usuário, e-mail, cpf e data de nascimento.
+* Relatório de usuários "ONG" incluindo as seguintes informações: ID da ONG, nome da ONG, CNPJ da ONG, número de contato da ONG, e-mail e a longitude e latitude.
  
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
