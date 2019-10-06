@@ -140,6 +140,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
     b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
     Usuário, ONG e item_doação
+    
     c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
     Usuário, ONG, item_doação, necessidade e requisita_requisição_doação.
     
