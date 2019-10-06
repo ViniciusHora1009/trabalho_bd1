@@ -41,16 +41,12 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual_atualizadov1.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
-    C) QUALIDADE 
-        Garantir que a semântica dos atributos seja clara no esquema
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas
     
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    [ESTour]: [Willian João Daniel, Carolina de Souza, Alexandre Jastrow]
+    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]
 
 #### 5.2 Descrição dos dados 
     PESSOA: Tabela que armazena informações relativa a pessoa física.<br>
