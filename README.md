@@ -137,8 +137,12 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema     
     a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
+    
     b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
+    Usuário, ONG e item_doação
     c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
+    Usuário, ONG, item_doação, necessidade e requisita_requisição_doação.
+    
 
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico_atualizadov1.png "Modelo Conceitual")
