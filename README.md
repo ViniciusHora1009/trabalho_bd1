@@ -32,11 +32,6 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
  
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
-    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
-    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
-    e deve ser criada antes do modelo conceitual
-    c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
-    
 ![Tabela de dados AppDoações Excel](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Tabela%20de%20dados.xlsx?raw=true "Tabela - AppDoações")<br>
 ![Tabela de dados AppDoações Calc](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Tabela%20de%20dados.ods?raw=true "Tabela - AppDoações")
     
