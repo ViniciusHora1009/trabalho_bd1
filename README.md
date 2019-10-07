@@ -129,6 +129,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema     
     a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
+    Cria um usuário, pesquisa por uma doação e pesquisa por uma necessidade.
     
     b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
     Usuário, ONG e item_doação
