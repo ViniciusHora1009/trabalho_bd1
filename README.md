@@ -38,7 +38,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual_atualizadov1.png "Modelo Conceitual")
-![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual_atualizadov1.brM3 "Modelo conceitual")<br>
+![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual_atualizadov2.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     
@@ -140,10 +140,10 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico_atualizadov1.png "Modelo Conceitual")
-![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logico_atualizadov1.brM3 "Modelo físico")<br>
+![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logico_atualizadov2.brM3 "Modelo físico")<br>
 
 ### 7	MODELO FÍSICO<br>
-![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/fisico_atualizadov1.sql "Modelo físico")<br>
+![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/fisico_atualizadov2.sql "Modelo físico")<br>
         
 >## Marco de Entrega 01 em: 07/10/2019<br>
         
