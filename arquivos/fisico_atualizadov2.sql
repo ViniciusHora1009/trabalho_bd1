@@ -163,10 +163,6 @@ ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requis
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa);
  
-ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_3
-    FOREIGN KEY (fk_item_doacao_endereco_doacao_ID_doacao, fk_item_doacao_endereco_doacao_ID_endereco???)
-    REFERENCES item_doacao (ID_doacao, ???);
- 
 ALTER TABLE foto ADD CONSTRAINT FK_foto_2
     FOREIGN KEY (caminho)
     REFERENCES item_doacao (ID_doacao)
@@ -194,10 +190,6 @@ ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade A
 ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade ADD CONSTRAINT FK_requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade_3
     FOREIGN KEY (fk_ONG_ID_ong)
     REFERENCES ONG (ID_ong);
- 
-ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade ADD CONSTRAINT FK_requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade_4
-    FOREIGN KEY (fk_necessidade_endereco_necessidade_ID_necessidade, fk_necessidade_endereco_necessidade_ID_endereco???)
-    REFERENCES necessidade_endereco_necessidade (ID_necessidade, ???);
  
 ALTER TABLE mensagem_necessidade ADD CONSTRAINT FK_mensagem_necessidade_2
     FOREIGN KEY (fk_status_mensagem_nec_ID_status)
