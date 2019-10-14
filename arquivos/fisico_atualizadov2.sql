@@ -35,8 +35,7 @@ CREATE TABLE item_doacao (
 
 CREATE TABLE requisita_doacao_requisita (
     fk_status_requisicao_ID_status INTEGER,
-    fk_pessoa_ID_pessoa INTEGER,
-    fk_item_doacao_endereco_doacao_ID_doacao VARCHAR(255)
+    fk_pessoa_ID_pessoa INTEGER
 );
 
 CREATE TABLE categoria (
@@ -82,7 +81,7 @@ CREATE TABLE ONG (
     longitude DECIMAL(50)
 );
 
-CREATE TABLE necessidade_endereco_necessidade (
+CREATE TABLE necessidade_necessidade (
     descricao VARCHAR(1000),
     ID_necessidade INTEGER PRIMARY KEY,
     titulo VARCHAR(255),
@@ -97,8 +96,7 @@ CREATE TABLE necessidade_endereco_necessidade (
 CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade (
     fk_status_req_necessidade_ID_mensagem_status INTEGER,
     fk_pessoa_ID_pessoa INTEGER,
-    fk_ONG_ID_ong INTEGER,
-    fk_necessidade_endereco_necessidade_ID_necessidade INTEGER
+    fk_ONG_ID_ong INTEGER
 );
 
 CREATE TABLE mensagem_necessidade (
@@ -163,6 +161,10 @@ ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requis
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa);
  
+ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_3
+    FOREIGN KEY (fk_item_doacao_endereco_doacao_ID_doacao, fk_item_doacao_endereco_doacao_ID_endereco???)
+    REFERENCES item_doacao (ID_doacao, ???);
+ 
 ALTER TABLE foto ADD CONSTRAINT FK_foto_2
     FOREIGN KEY (caminho)
     REFERENCES item_doacao (ID_doacao)
@@ -173,7 +175,7 @@ ALTER TABLE mensagem_requisicao ADD CONSTRAINT FK_mensagem_requisicao_2
     REFERENCES status_mensagem (ID_mensagem_status)
     ON DELETE CASCADE;
  
-ALTER TABLE necessidade_endereco_necessidade ADD CONSTRAINT FK_necessidade_endereco_necessidade_2
+ALTER TABLE necessidade_necessidade ADD CONSTRAINT FK_necessidade_necessidade_2
     FOREIGN KEY (fk_categoria_necessidade_ID_categoria)
     REFERENCES categoria_necessidade (ID_categoria)
     ON DELETE CASCADE;
@@ -191,6 +193,10 @@ ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade A
     FOREIGN KEY (fk_ONG_ID_ong)
     REFERENCES ONG (ID_ong);
  
+ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade ADD CONSTRAINT FK_requisicao_ajuda_supre_pessoa_ONG_necessidade_endereco_necessidade_4
+    FOREIGN KEY (fk_necessidade_endereco_necessidade_ID_necessidade, fk_necessidade_endereco_necessidade_ID_endereco???)
+    REFERENCES necessidade_necessidade (ID_necessidade, ???);
+ 
 ALTER TABLE mensagem_necessidade ADD CONSTRAINT FK_mensagem_necessidade_2
     FOREIGN KEY (fk_status_mensagem_nec_ID_status)
     REFERENCES status_mensagem_nec (ID_status)
@@ -198,7 +204,7 @@ ALTER TABLE mensagem_necessidade ADD CONSTRAINT FK_mensagem_necessidade_2
  
 ALTER TABLE foto_necessidade ADD CONSTRAINT FK_foto_necessidade_2
     FOREIGN KEY (fk_necessidade_endereco_necessidade_ID_necessidade)
-    REFERENCES necessidade_endereco_necessidade (ID_necessidade)
+    REFERENCES necessidade_necessidade (ID_necessidade)
     ON DELETE CASCADE;
  
 ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessidade_ONG_1
@@ -208,7 +214,7 @@ ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessid
  
 ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessidade_ONG_2
     FOREIGN KEY (fk_necessidade_endereco_necessidade_ID_necessidade)
-    REFERENCES necessidade_endereco_necessidade (ID_necessidade)
+    REFERENCES necessidade_necessidade (ID_necessidade)
     ON DELETE NO ACTION;
  
 ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessidade_ONG_3
