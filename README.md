@@ -77,6 +77,10 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         DESCRICAO: Campo que armazena o a descrição (texto) que o usuário escreveu sobre sua doação.<br>
         LATITUDE: Campo que armazena a latitude do local onde a doação será concretizada.<br>
         LONGITUDE: Campo que armazena a longitude do local onde a doação será concretizada.<br>
+        RUA: Campo que armazena a rua de encontro de uma doação.<br>
+        BAIRRO: Campo que armazena o bairro de encontro de uma doação.<br>
+        CIDADE: Campo que armazena a cidade de encontro de uma doação.<br>
+        ESTADO: Campo que armazena a estado de encontro de uma doação.<br>
     
     CATEGORIA: Tabela que armazena as informações relativa as categorias dos items que serão doados.<br>
         ID_CATEGORIA: Campo que armazena o código de identificação de uma categoria de item.<br>
@@ -111,6 +115,15 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         TITULO: Campo que armazena o título indentificador de uma necessidade.<br>
         DESCRICAO: Campo que armazena a descrição (texto) referente a uma necessidade.
         VALOR: Campo que armazena o valor a ser recompensado pela ajuda ao necessitando.<br>
+        RUA: Campo que armazena a rua de encontro de uma necessidade.<br>
+        BAIRRO: Campo que armazena o bairro de encontro de uma necessidade.<br>
+        CIDADE: Campo que armazena a cidade de encontro de uma necessidade.<br>
+        ESTADO: Campo que armazena a estado de encontro de uma necessidade.<br>
+    
+    CATEGORIA_NECESSIDADE: Tabela que armazena as informações relativa as categorias das necessidades.<br>
+        ID_CATEGORIA: Campo que armazena o código de identificação de uma categoria de item.<br>
+        NOME: Campo que armazena o nome de uma categoria.<br>
+        VALOR_MEDIO: Campo que armazena o valor possível para uma categoria com item em condições normais.<br>
         
     REQUISICAO_AJUDA: Tabela que armazena as informações relativa a requisição de ajuda em uma necessidade de um usuário.<br>
     
