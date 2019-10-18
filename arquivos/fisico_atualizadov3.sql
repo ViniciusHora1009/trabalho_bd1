@@ -6,7 +6,7 @@ CREATE TABLE pessoa (
     ID_pessoa INTEGER PRIMARY KEY,
     num_celular BIGINT,
     email VARCHAR(255),
-    data_nascimento DATETIME,
+    data_nascimento DATE,
     saldo DECIMAL(10)
 );
 
