@@ -66,6 +66,10 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         LONGITUDE: Campo que armazena o longitude da localização de cada ONG usuária do sistema.<br>
         NUM_CONTATO: Campo que armazena o número de contato de cada ONG usuária do sistema.<br>
         NOME: Campo que armazena o nome de cada ONG usuária do sistema.<br>
+        RUA: Campo que armazena a rua de encontro de uma doação.<br>
+        BAIRRO: Campo que armazena o bairro de encontro de uma doação.<br>
+        CIDADE: Campo que armazena a cidade de encontro de uma doação.<br>
+        ESTADO: Campo que armazena a estado de encontro de uma doação.<br>
     
     AVALIACAO_USUARIO: Tabela que armazena informações relativa as avaliações recebidas por um usuário (pessoa física).<br>
         ID_AVALIACAO: Campo que armazena o código de identificação de cada avaliação feita por alguém.<br>
