@@ -64,8 +64,8 @@ CREATE TABLE status_requisicao (
 CREATE TABLE mensagem_requisicao (
     ID_mensagem INTEGER PRIMARY KEY,
     conteudo VARCHAR(1000),
-    data INTEGER,
-    hora FLOAT,
+    data DATE,
+    hora TIME,
     fk_status_mensagem_ID_mensagem_status INTEGER
 );
 
@@ -111,8 +111,8 @@ CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
 CREATE TABLE mensagem_necessidade (
     ID_mensagem INTEGER PRIMARY KEY,
     conteudo VARCHAR(1000),
-    data INTEGER,
-    hora FLOAT,
+    data DATE,
+    hora TIME,
     fk_status_mensagem_nec_ID_status INTEGER
 );
 
