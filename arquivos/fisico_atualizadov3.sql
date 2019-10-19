@@ -120,7 +120,7 @@ CREATE TABLE necessidade (
 );
 
 CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
-    fk_status_req_necessidade_ID_mensagem_statusINTEGER,
+    fk_status_req_necessidade_ID_mensagem_status INTEGER,
     fk_pessoa_ID_pessoa INTEGER,
     fk_ONG_ID_ong INTEGER,
     fk_necessidade_ID_necessidade INTEGER
