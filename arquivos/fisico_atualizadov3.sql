@@ -1,9 +1,25 @@
 /* logico_atualizadov5: */
 
+CREATE SEQUENCE PESSOAS START 1 INCREMENT 1;
+CREATE SEQUENCE AVALIACOES START 1 INCREMENT 1;
+CREATE SEQUENCE DOACOES START 1 INCREMENT 1;
+CREATE SEQUENCE NECESSIDADES START 1 INCREMENT 1;
+CREATE SEQUENCE CATEGORIAS START 1 INCREMENT 1;
+CREATE SEQUENCE NEC_CATEGORIAS START 1 INCREMENT 1;
+CREATE SEQUENCE STATUS_MENSAGENS START 1 INCREMENT 1;
+CREATE SEQUENCE STATUS_NEC_MENSAGENS START 1 INCREMENT 1;
+CREATE SEQUENCE STATUS_REQUISICOES 1 INCREMENT 1;
+CREATE SEQUENCE STATUS_NEC_REQUISICOES START 1 INCREMENT 1;
+CREATE SEQUENCE FOTOS START 1 INCREMENT 1;
+CREATE SEQUENCE FOTOS_NECESSIDADE START 1 INCREMENT 1;
+CREATE SEQUENCE ESTADOS_ITEM START 1 INCREMENT 1;
+CREATE SEQUENCE AVALIACOES START 1 INCREMENT 1;
+CREATE SEQUENCE ONGS START 1 INCREMENT 1;
+
 CREATE TABLE pessoa (
     CPF BIGINT UNIQUE,
     nome VARCHAR(255),
-    ID_pessoa SERIAL PRIMARY KEY UNIQUE,
+    ID_pessoa SERIAL PRIMARY KEY,
     num_celular INTEGER,
     email VARCHAR(255),
     data_nascimento DATE,
@@ -11,7 +27,7 @@ CREATE TABLE pessoa (
 );
 
 CREATE TABLE avaliacao_usuario (
-    ID_avaliacao SERIAL PRIMARY KEY UNIQUE,
+    ID_avaliacao SERIAL PRIMARY KEY,
     nota INTEGER,
     comentario VARCHAR(1000),
     fk_pessoa_ID_pessoa SERIAL,
@@ -21,7 +37,7 @@ CREATE TABLE avaliacao_usuario (
 CREATE TABLE item_doacao (
     titulo VARCHAR(255),
     latitude DECIMAL(50),
-    ID_doacao SERIAL PRIMARY KEY UNIQUE,
+    ID_doacao SERIAL PRIMARY KEY,
     descricao VARCHAR(1000),
     longitude DECIMAL(50),
     bairro VARCHAR(255),
@@ -40,29 +56,29 @@ CREATE TABLE requisita_doacao_requisita (
 );
 
 CREATE TABLE categoria (
-    ID_categoria SERIAL PRIMARY KEY UNIQUE,
+    ID_categoria SERIAL PRIMARY KEY,
     nome VARCHAR(50),
     valor_medio INTEGER
 );
 
 CREATE TABLE foto (
-    ID_foto SERIAL PRIMARY KEY UNIQUE,
+    ID_foto SERIAL PRIMARY KEY,
     caminho VARCHAR(500),
     fk_item_doacao_ID_doacao SERIAL
 );
 
 CREATE TABLE estado_item (
-    ID_estado SERIAL PRIMARY KEY UNIQUE,
+    ID_estado SERIAL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE status_requisicao (
-    ID_status SERIAL PRIMARY KEY UNIQUE,
+    ID_status SERIAL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE mensagem_requisicao (
-    ID_mensagem SERIAL PRIMARY KEY UNIQUE,
+    ID_mensagem SERIAL PRIMARY KEY,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
@@ -70,7 +86,7 @@ CREATE TABLE mensagem_requisicao (
 );
 
 CREATE TABLE status_mensagem (
-    ID_mensagem_status SERIAL PRIMARY KEY UNIQUE,
+    ID_mensagem_status SERIAL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
@@ -80,7 +96,7 @@ CREATE TABLE ONG (
     email VARCHAR(55),
     latitude DECIMAL(50),
     nome VARCHAR(255),
-    ID_ong SERIAL PRIMARY KEY UNIQUE,
+    ID_ong SERIAL PRIMARY KEY,
     longitude DECIMAL(50),
     rua VARCHAR(255),
     bairro VARCHAR(255),
@@ -90,7 +106,7 @@ CREATE TABLE ONG (
 
 CREATE TABLE necessidade (
     descricao VARCHAR(1000),
-    ID_necessidade SERIAL PRIMARY KEY UNIQUE,
+    ID_necessidade SERIAL PRIMARY KEY,
     titulo VARCHAR(255),
     valor INTEGER,
     rua VARCHAR(255),
@@ -109,7 +125,7 @@ CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
 );
 
 CREATE TABLE mensagem_necessidade (
-    ID_mensagem SERIAL PRIMARY KEY UNIQUE,
+    ID_mensagem SERIAL PRIMARY KEY,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
@@ -117,23 +133,23 @@ CREATE TABLE mensagem_necessidade (
 );
 
 CREATE TABLE status_req_necessidade (
-    ID_mensagem_status SERIAL PRIMARY KEY UNIQUE,
+    ID_mensagem_status SERIAL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE foto_necessidade (
-    ID_foto SERIAL PRIMARY KEY UNIQUE,
+    ID_foto SERIAL PRIMARY KEY,
     caminho VARCHAR(500),
     fk_necessidade_ID_necessidade SERIAL
 );
 
 CREATE TABLE status_mensagem_nec (
-    ID_status SERIAL PRIMARY KEY UNIQUE,
+    ID_status SERIAL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE categoria_necessidade (
-    ID_categoria SERIAL PRIMARY KEY UNIQUE, 
+    ID_categoria SERIAL PRIMARY KEY, 
     nome VARCHAR(55),
     valor_medio INTEGER
 );
