@@ -28,9 +28,9 @@ CREATE TABLE item_doacao (
     estado VARCHAR(255),
     cidade VARCHAR(255),
     rua VARCHAR(255),
-    fk_pessoa_ID_pessoa INTEGER,
-    fk_categoria_ID_categoria INTEGER,
-    fk_estado_item_ID_estado INTEGER
+    fk_pessoa_ID_pessoa SERIAL,
+    fk_categoria_ID_categoria SERIAL,
+    fk_estado_item_ID_estado SERIAL
 );
 
 CREATE TABLE requisita_doacao_requisita (
