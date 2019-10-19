@@ -15,11 +15,13 @@ CREATE SEQUENCE FOTOS_NECESSIDADE START 1 INCREMENT 1;
 CREATE SEQUENCE ESTADOS_ITEM START 1 INCREMENT 1;
 CREATE SEQUENCE AVALIACOES START 1 INCREMENT 1;
 CREATE SEQUENCE ONGS START 1 INCREMENT 1;
+CREATE SEQUENCE MENSAGENS START 1 INCREMENT 1;
+CREATE SEQUENCE NEC_MENSAGENS START 1 INCREMENT 1;
 
 CREATE TABLE pessoa (
     CPF BIGINT UNIQUE,
     nome VARCHAR(255),
-    ID_pessoa SERIAL PRIMARY KEY,
+    ID_pessoa INTEGER PRIMARY KEY,
     num_celular INTEGER,
     email VARCHAR(255),
     data_nascimento DATE,
@@ -27,66 +29,66 @@ CREATE TABLE pessoa (
 );
 
 CREATE TABLE avaliacao_usuario (
-    ID_avaliacao SERIAL PRIMARY KEY,
+    ID_avaliacao INTEGER PRIMARY KEY,
     nota INTEGER,
     comentario VARCHAR(1000),
-    fk_pessoa_ID_pessoa SERIAL,
-    fk_pessoa_ID_pessoa_ SERIAL
+    fk_pessoa_ID_pessoa INTEGER,
+    fk_pessoa_ID_pessoa_ INTEGER
 );
 
 CREATE TABLE item_doacao (
     titulo VARCHAR(255),
     latitude DECIMAL(50),
-    ID_doacao SERIAL PRIMARY KEY,
+    ID_doacao INTEGER PRIMARY KEY,
     descricao VARCHAR(1000),
     longitude DECIMAL(50),
     bairro VARCHAR(255),
     estado VARCHAR(255),
     cidade VARCHAR(255),
     rua VARCHAR(255),
-    fk_pessoa_ID_pessoa SERIAL,
-    fk_categoria_ID_categoria SERIAL,
-    fk_estado_item_ID_estado SERIAL
+    fk_pessoa_ID_pessoa INTEGER,
+    fk_categoria_ID_categoria INTEGER,
+    fk_estado_item_ID_estado INTEGER
 );
 
 CREATE TABLE requisita_doacao_requisita (
-    fk_status_requisicao_ID_status SERIAL,
-    fk_pessoa_ID_pessoa SERIAL,
-    fk_item_doacao_ID_doacao SERIAL
+    fk_status_requisicao_ID_status INTEGER,
+    fk_pessoa_ID_pessoa INTEGER,
+    fk_item_doacao_ID_doacao INTEGER
 );
 
 CREATE TABLE categoria (
-    ID_categoria SERIAL PRIMARY KEY,
+    ID_categoria INTEGER PRIMARY KEY,
     nome VARCHAR(50),
     valor_medio INTEGER
 );
 
 CREATE TABLE foto (
-    ID_foto SERIAL PRIMARY KEY,
+    ID_foto INTEGER PRIMARY KEY,
     caminho VARCHAR(500),
-    fk_item_doacao_ID_doacao SERIAL
+    fk_item_doacao_ID_doacao INTEGER
 );
 
 CREATE TABLE estado_item (
-    ID_estado SERIAL PRIMARY KEY,
+    ID_estado INTEGER PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE status_requisicao (
-    ID_status SERIAL PRIMARY KEY,
+    ID_status INTEGERL PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE mensagem_requisicao (
-    ID_mensagem SERIAL PRIMARY KEY,
+    ID_mensagem INTEGER PRIMARY KEY,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
-    fk_status_mensagem_ID_mensagem_status SERIAL
+    fk_status_mensagem_ID_mensagem_status INTEGER
 );
 
 CREATE TABLE status_mensagem (
-    ID_mensagem_status SERIAL PRIMARY KEY,
+    ID_mensagem_status INTEGER PRIMARY KEY,
     nome VARCHAR(50)
 );
 
@@ -96,7 +98,7 @@ CREATE TABLE ONG (
     email VARCHAR(55),
     latitude DECIMAL(50),
     nome VARCHAR(255),
-    ID_ong SERIAL PRIMARY KEY,
+    ID_ong INTEGER PRIMARY KEY,
     longitude DECIMAL(50),
     rua VARCHAR(255),
     bairro VARCHAR(255),
@@ -106,7 +108,7 @@ CREATE TABLE ONG (
 
 CREATE TABLE necessidade (
     descricao VARCHAR(1000),
-    ID_necessidade SERIAL PRIMARY KEY,
+    ID_necessidade INTEGER PRIMARY KEY,
     titulo VARCHAR(255),
     valor INTEGER,
     rua VARCHAR(255),
@@ -114,50 +116,50 @@ CREATE TABLE necessidade (
     bairro VARCHAR(255),
     latitude DECIMAL(50),
     longitude DECIMAL(50),
-    fk_categoria_necessidade_ID_categoria SERIAL
+    fk_categoria_necessidade_ID_categoria INTEGER
 );
 
 CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
-    fk_status_req_necessidade_ID_mensagem_status SERIAL,
-    fk_pessoa_ID_pessoa SERIAL,
-    fk_ONG_ID_ong SERIAL,
-    fk_necessidade_ID_necessidade SERIAL
+    fk_status_req_necessidade_ID_mensagem_statusINTEGER,
+    fk_pessoa_ID_pessoa INTEGER,
+    fk_ONG_ID_ong INTEGER,
+    fk_necessidade_ID_necessidade INTEGER
 );
 
 CREATE TABLE mensagem_necessidade (
-    ID_mensagem SERIAL PRIMARY KEY,
+    ID_mensagem INTEGER PRIMARY KEY,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
-    fk_status_mensagem_nec_ID_status SERIAL
+    fk_status_mensagem_nec_ID_status INTEGER
 );
 
 CREATE TABLE status_req_necessidade (
-    ID_mensagem_status SERIAL PRIMARY KEY,
+    ID_mensagem_status INTEGER PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE foto_necessidade (
-    ID_foto SERIAL PRIMARY KEY,
+    ID_foto INTEGER PRIMARY KEY,
     caminho VARCHAR(500),
-    fk_necessidade_ID_necessidade SERIAL
+    fk_necessidade_ID_necessidade INTEGER
 );
 
 CREATE TABLE status_mensagem_nec (
-    ID_status SERIAL PRIMARY KEY,
+    ID_status INTEGER PRIMARY KEY,
     nome VARCHAR(50)
 );
 
 CREATE TABLE categoria_necessidade (
-    ID_categoria SERIAL PRIMARY KEY, 
+    ID_categoria INTEGER PRIMARY KEY, 
     nome VARCHAR(55),
     valor_medio INTEGER
 );
 
 CREATE TABLE expoe_pessoa_necessidade_ONG (
-    fk_pessoa_ID_pessoa SERIAL,
-    fk_necessidade_ID_necessidade SERIAL,
-    fk_ONG_ID_ong SERIAL
+    fk_pessoa_ID_pessoa INTEGER,
+    fk_necessidade_ID_necessidade INTEGER,
+    fk_ONG_ID_ong INTEGER
 );
  
 ALTER TABLE avaliacao_usuario ADD CONSTRAINT FK_avaliacao_usuario_2
