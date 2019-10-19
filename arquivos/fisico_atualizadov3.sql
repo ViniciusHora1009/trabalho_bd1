@@ -3,7 +3,7 @@
 CREATE TABLE pessoa (
     CPF BIGINT UNIQUE,
     nome VARCHAR(255),
-    ID_pessoa SERIAL PRIMARY KEY,
+    ID_pessoa SERIAL PRIMARY KEY NOT NULL,
     num_celular INTEGER,
     email VARCHAR(255),
     data_nascimento DATE,
@@ -11,7 +11,7 @@ CREATE TABLE pessoa (
 );
 
 CREATE TABLE avaliacao_usuario (
-    ID_avaliacao SERIAL PRIMARY KEY,
+    ID_avaliacao SERIAL PRIMARY KEY NOT NULL,
     nota INTEGER,
     comentario VARCHAR(1000),
     fk_pessoa_ID_pessoa SERIAL,
@@ -21,7 +21,7 @@ CREATE TABLE avaliacao_usuario (
 CREATE TABLE item_doacao (
     titulo VARCHAR(255),
     latitude DECIMAL(50),
-    ID_doacao SERIAL PRIMARY KEY,
+    ID_doacao SERIAL PRIMARY KEY NOT NULL,
     descricao VARCHAR(1000),
     longitude DECIMAL(50),
     bairro VARCHAR(255),
@@ -40,29 +40,29 @@ CREATE TABLE requisita_doacao_requisita (
 );
 
 CREATE TABLE categoria (
-    ID_categoria SERIAL PRIMARY KEY,
+    ID_categoria SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50),
     valor_medio INTEGER
 );
 
 CREATE TABLE foto (
-    ID_foto SERIAL PRIMARY KEY,
+    ID_foto SERIAL PRIMARY KEY NOT NULL,
     caminho VARCHAR(500),
     fk_item_doacao_ID_doacao SERIAL
 );
 
 CREATE TABLE estado_item (
-    ID_estado SERIAL PRIMARY KEY,
+    ID_estado SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50)
 );
 
 CREATE TABLE status_requisicao (
-    ID_status SERIAL PRIMARY KEY,
+    ID_status SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50)
 );
 
 CREATE TABLE mensagem_requisicao (
-    ID_mensagem SERIAL PRIMARY KEY,
+    ID_mensagem SERIAL PRIMARY KEY NOT NULL,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
@@ -70,7 +70,7 @@ CREATE TABLE mensagem_requisicao (
 );
 
 CREATE TABLE status_mensagem (
-    ID_mensagem_status SERIAL PRIMARY KEY,
+    ID_mensagem_status SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50)
 );
 
@@ -80,7 +80,7 @@ CREATE TABLE ONG (
     email VARCHAR(55),
     latitude DECIMAL(50),
     nome VARCHAR(255),
-    ID_ong SERIAL PRIMARY KEY,
+    ID_ong SERIAL PRIMARY KEY NOT NULL,
     longitude DECIMAL(50),
     rua VARCHAR(255),
     bairro VARCHAR(255),
@@ -90,7 +90,7 @@ CREATE TABLE ONG (
 
 CREATE TABLE necessidade (
     descricao VARCHAR(1000),
-    ID_necessidade SERIAL PRIMARY KEY,
+    ID_necessidade SERIAL PRIMARY KEY NOT NULL,
     titulo VARCHAR(255),
     valor INTEGER,
     rua VARCHAR(255),
@@ -109,7 +109,7 @@ CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
 );
 
 CREATE TABLE mensagem_necessidade (
-    ID_mensagem SERIAL PRIMARY KEY,
+    ID_mensagem SERIAL PRIMARY KEY NOT NULL,
     conteudo VARCHAR(1000),
     data1 DATE,
     hora TIME,
@@ -117,23 +117,23 @@ CREATE TABLE mensagem_necessidade (
 );
 
 CREATE TABLE status_req_necessidade (
-    ID_mensagem_status SERIAL PRIMARY KEY,
+    ID_mensagem_status SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50)
 );
 
 CREATE TABLE foto_necessidade (
-    ID_foto SERIAL PRIMARY KEY,
+    ID_foto SERIAL PRIMARY KEY NOT NULL,
     caminho VARCHAR(500),
     fk_necessidade_ID_necessidade SERIAL
 );
 
 CREATE TABLE status_mensagem_nec (
-    ID_status SERIAL PRIMARY KEY,
+    ID_status SERIAL PRIMARY KEY NOT NULL,
     nome VARCHAR(50)
 );
 
 CREATE TABLE categoria_necessidade (
-    ID_categoria SERIAL PRIMARY KEY,
+    ID_categoria SERIAL PRIMARY KEY NOT NULL, 
     nome VARCHAR(55),
     valor_medio INTEGER
 );
