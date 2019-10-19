@@ -1,7 +1,7 @@
 /* logico_atualizadov5: */
 
 CREATE TABLE pessoa (
-    CPF INTEGER UNIQUE,
+    CPF BIGINT UNIQUE,
     nome VARCHAR(255),
     ID_pessoa SERIAL PRIMARY KEY,
     num_celular INTEGER,
@@ -75,7 +75,7 @@ CREATE TABLE status_mensagem (
 );
 
 CREATE TABLE ONG (
-    cnpj INTEGER UNIQUE,
+    cnpj BIGINT UNIQUE,
     num_contato BIGINT[11],
     email VARCHAR(55),
     latitude DECIMAL(50),
