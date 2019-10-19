@@ -7,7 +7,7 @@ CREATE TABLE pessoa (
     num_celular INTEGER,
     email VARCHAR(255),
     data_nascimento DATE,
-    saldo DECIMAL(10)
+    saldo INTEGER
 );
 
 CREATE TABLE avaliacao_usuario (
