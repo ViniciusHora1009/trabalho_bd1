@@ -1,10 +1,10 @@
 /* logico_atualizadov5: */
 
 CREATE TABLE pessoa (
-    CPF BIGINT UNIQUE,
+    CPF INTEGER UNIQUE,
     nome VARCHAR(255),
     ID_pessoa SERIAL PRIMARY KEY,
-    num_celular BIGINT,
+    num_celular INTEGER,
     email VARCHAR(255),
     data_nascimento DATE,
     saldo DECIMAL(10)
@@ -64,7 +64,7 @@ CREATE TABLE status_requisicao (
 CREATE TABLE mensagem_requisicao (
     ID_mensagem SERIAL PRIMARY KEY,
     conteudo VARCHAR(1000),
-    data DATE,
+    data1 DATE,
     hora TIME,
     fk_status_mensagem_ID_mensagem_status SERIAL
 );
@@ -75,7 +75,7 @@ CREATE TABLE status_mensagem (
 );
 
 CREATE TABLE ONG (
-    cnpj BIGINT UNIQUE,
+    cnpj INTEGER UNIQUE,
     num_contato BIGINT[11],
     email VARCHAR(55),
     latitude DECIMAL(50),
@@ -111,7 +111,7 @@ CREATE TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade (
 CREATE TABLE mensagem_necessidade (
     ID_mensagem SERIAL PRIMARY KEY,
     conteudo VARCHAR(1000),
-    data DATE,
+    data1 DATE,
     hora TIME,
     fk_status_mensagem_nec_ID_status SERIAL
 );
