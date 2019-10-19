@@ -76,7 +76,7 @@ CREATE TABLE status_mensagem (
 
 CREATE TABLE ONG (
     cnpj BIGINT UNIQUE,
-    num_contato BIGINT[11],
+    num_contato INTEGER,
     email VARCHAR(55),
     latitude DECIMAL(50),
     nome VARCHAR(255),
