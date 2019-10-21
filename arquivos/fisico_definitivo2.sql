@@ -164,62 +164,69 @@ CREATE TABLE envia_pessoa_mensagem_necessidade_ONG (
 );
  
 ALTER TABLE avaliacao_usuario ADD CONSTRAINT FK_avaliacao_usuario_2
-    FOREIGN KEY (fk_pessoa_ID_pessoa, fk_pessoa_ID_pessoa_)
-    REFERENCES pessoa (ID_pessoa, ID_pessoa)
-    ON DELETE CASCADE;
+    FOREIGN KEY (fk_pessoa_ID_pessoa)
+    REFERENCES pessoa (ID_pessoa)
+    ON DELETE NO ACTION;
+
+ALTER TABLE avaliacao_usuario ADD CONSTRAINT FK_avaliacao_usuario_3
+    FOREIGN KEY (fk_pessoa_ID_pessoa_)
+    REFERENCES pessoa (ID_pessoa)
+    ON DELETE NO ACTION;
  
 ALTER TABLE item_doacao ADD CONSTRAINT FK_item_doacao_2
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE item_doacao ADD CONSTRAINT FK_item_doacao_3
     FOREIGN KEY (fk_categoria_ID_categoria)
     REFERENCES categoria (ID_categoria)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE item_doacao ADD CONSTRAINT FK_item_doacao_4
     FOREIGN KEY (fk_estado_item_ID_estado)
     REFERENCES estado_item (ID_estado)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_2
     FOREIGN KEY (fk_status_requisicao_ID_status)
     REFERENCES status_requisicao (ID_status)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_3
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa);
+    ON DELETE NO ACTION;
  
 ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_4
     FOREIGN KEY (fk_item_doacao_ID_doacao)
     REFERENCES item_doacao (ID_doacao);
+    ON DELETE NO ACTION;
  
 ALTER TABLE foto ADD CONSTRAINT FK_foto_2
     FOREIGN KEY (fk_item_doacao_ID_doacao)
     REFERENCES item_doacao (ID_doacao)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE mensagem_requisicao ADD CONSTRAINT FK_mensagem_requisicao_2
     FOREIGN KEY (fk_status_mensagem_ID_mensagem_status)
     REFERENCES status_mensagem (ID_mensagem_status)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE mensagem_requisicao ADD CONSTRAINT FK_mensagem_requisicao_3
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE necessidade ADD CONSTRAINT FK_necessidade_2
     FOREIGN KEY (fk_categoria_necessidade_ID_categoria)
     REFERENCES categoria_necessidade (ID_categoria)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade ADD CONSTRAINT FK_requisicao_ajuda_supre_pessoa_ONG_necessidade_2
     FOREIGN KEY (fk_status_req_necessidade_ID_mensagem_status)
     REFERENCES status_req_necessidade (ID_mensagem_status)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade ADD CONSTRAINT FK_requisicao_ajuda_supre_pessoa_ONG_necessidade_3
     FOREIGN KEY (fk_pessoa_ID_pessoa)
@@ -236,22 +243,22 @@ ALTER TABLE requisicao_ajuda_supre_pessoa_ONG_necessidade ADD CONSTRAINT FK_requ
 ALTER TABLE mensagem_necessidade ADD CONSTRAINT FK_mensagem_necessidade_2
     FOREIGN KEY (fk_status_mensagem_nec_ID_status)
     REFERENCES status_mensagem_nec (ID_status)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE foto_necessidade ADD CONSTRAINT FK_foto_necessidade_2
     FOREIGN KEY (fk_necessidade_ID_necessidade)
     REFERENCES necessidade (ID_necessidade)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
  
 ALTER TABLE possibilita ADD CONSTRAINT FK_possibilita_1
     FOREIGN KEY (fk_requisita_doacao_requisita_ID)
     REFERENCES requisita_doacao_requisita (ID)
-    ON DELETE RESTRICT;
+    ON DELETE NO ACTION;
  
 ALTER TABLE possibilita ADD CONSTRAINT FK_possibilita_2
     FOREIGN KEY (fk_mensagem_requisicao_ID_mensagem)
     REFERENCES mensagem_requisicao (ID_mensagem)
-    ON DELETE SET NULL;
+    ON DELETE NO ACTION;
  
 ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessidade_ONG_1
     FOREIGN KEY (fk_pessoa_ID_pessoa)
@@ -266,22 +273,22 @@ ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessid
 ALTER TABLE expoe_pessoa_necessidade_ONG ADD CONSTRAINT FK_expoe_pessoa_necessidade_ONG_3
     FOREIGN KEY (fk_ONG_ID_ong)
     REFERENCES ONG (ID_ong)
-    ON DELETE SET NULL;
+    ON DELETE NO ACTION;
  
 ALTER TABLE possibilita_ajuda ADD CONSTRAINT FK_possibilita_ajuda_1
     FOREIGN KEY (fk_requisicao_ajuda_supre_pessoa_ONG_necessidade_ID)
     REFERENCES requisicao_ajuda_supre_pessoa_ONG_necessidade (ID)
-    ON DELETE RESTRICT;
+    ON DELETE NO ACTION;
  
 ALTER TABLE possibilita_ajuda ADD CONSTRAINT FK_possibilita_ajuda_2
     FOREIGN KEY (fk_mensagem_necessidade_ID_mensagem)
     REFERENCES mensagem_necessidade (ID_mensagem)
-    ON DELETE SET NULL;
+    ON DELETE NO ACTION;
  
 ALTER TABLE envia_pessoa_mensagem_necessidade_ONG ADD CONSTRAINT FK_envia_pessoa_mensagem_necessidade_ONG_1
     FOREIGN KEY (fk_pessoa_ID_pessoa)
     REFERENCES pessoa (ID_pessoa)
-    ON DELETE SET NULL;
+    ON DELETE NO ACTION;
  
 ALTER TABLE envia_pessoa_mensagem_necessidade_ONG ADD CONSTRAINT FK_envia_pessoa_mensagem_necessidade_ONG_2
     FOREIGN KEY (fk_mensagem_necessidade_ID_mensagem)
@@ -291,4 +298,4 @@ ALTER TABLE envia_pessoa_mensagem_necessidade_ONG ADD CONSTRAINT FK_envia_pessoa
 ALTER TABLE envia_pessoa_mensagem_necessidade_ONG ADD CONSTRAINT FK_envia_pessoa_mensagem_necessidade_ONG_3
     FOREIGN KEY (fk_ONG_ID_ong)
     REFERENCES ONG (ID_ong)
-    ON DELETE SET NULL;
+    ON DELETE NO ACTION;
