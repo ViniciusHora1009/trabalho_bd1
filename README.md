@@ -188,7 +188,326 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
+        
+            print("Junção de todas as tabelas do banco")
+            cur.execute("""SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",
+            PESSOA.NOME,
+            PESSOA.CPF,
+            AVALIACAO_USUARIO.ID_AVALIACAO AS "ID DE AVALIAÇÃO",
+            AVALIACAO_USUARIO.NOTA,
+            AVALIACAO_USUARIO.COMENTARIO,
+            ITEM_DOACAO.ID_DOACAO AS "ID DA DOAÇÃO",
+            ITEM_DOACAO.TITULO,
+            CATEGORIA.NOME AS "CATEGORIA DA DOAÇÃO",
+            FOTO.CAMINHO AS "CAMINHO DA FOTO",
+            ESTADO_ITEM.NOME AS "ESTADO DE CONSERVAÇÃO",
+            STATUS_REQUISICAO.NOME AS "STATUS DA REQUISIÇÃO",
+            MENSAGEM_REQUISICAO.CONTEUDO AS "MENSAGEM",
+            STATUS_MENSAGEM.NOME AS "STATUS DA MENSAGEM",
+            NECESSIDADE.TITULO,
+            FOTO_NECESSIDADE.CAMINHO AS "CAMINHO DA FOTO NECESSIDADE",
+            CATEGORIA_NECESSIDADE.NOME AS "CATEGORIA DA NECESSIDADE",
+            MENSAGEM_NECESSIDADE.CONTEUDO AS "MENSAGEM DA NECESSIDADE",
+            STATUS_MENSAGEM_NEC.NOME AS "STATUS DA MENSAGEM DA NECESSIDADE",
+            STATUS_REQ_NECESSIDADE "AS STATUS DA REQUISIÇÃO DA NECESSIDADE"
+            FROM PESSOA 
+            INNER JOIN AVALIACAO_USUARIO ON(PESSOA.ID_PESSOA = AVALIACAO_USUARIO.FK_PESSOA_ID_PESSOA_)
+            INNER JOIN ITEM_DOACAO ON(PESSOA.ID_PESSOA = ITEM_DOACAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN CATEGORIA ON(ITEM_DOACAO.FK_CATEGORIA_ID_CATEGORIA = CATEGORIA.ID_CATEGORIA)
+            INNER JOIN FOTO ON(ITEM_DOACAO.ID_DOACAO = FOTO.FK_ITEM_DOACAO_ID_DOACAO)
+            INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)
+            INNER JOIN REQUISITA_DOACAO_REQUISITA ON(PESSOA.ID_PESSOA = REQUISITA_DOACAO_REQUISITA.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_REQUISICAO ON(REQUISITA_DOACAO_REQUISITA.FK_STATUS_REQUISICAO_ID_STATUS = STATUS_REQUISICAO.ID_STATUS)
+            INNER JOIN POSSIBILITA ON(REQUISITA_DOACAO_REQUISITA.ID = POSSIBILITA.FK_REQUISITA_DOACAO_REQUISITA_ID)
+            INNER JOIN MENSAGEM_REQUISICAO ON(POSSIBILITA.FK_MENSAGEM_REQUISICAO_ID_MENSAGEM = MENSAGEM_REQUISICAO.ID_MENSAGEM AND PESSOA.ID_PESSOA = MENSAGEM_REQUISICAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_MENSAGEM ON(MENSAGEM_REQUISICAO.FK_STATUS_MENSAGEM_ID_MENSAGEM_STATUS = STATUS_MENSAGEM.ID_MENSAGEM_STATUS)
+            INNER JOIN EXPOE_PESSOA_NECESSIDADE_ONG ON (PESSOA.ID_PESSOA = EXPOE_PESSOA_NECESSIDADE_ONG.FK_PESSOA_ID_PESSOA)
+            INNER JOIN NECESSIDADE ON(EXPOE_PESSOA_NECESSIDADE_ONG.FK_NECESSIDADE_ID_NECESSIDADE = NECESSIDADE.ID_NECESSIDADE)
+            INNER JOIN FOTO_NECESSIDADE ON(NECESSIDADE.ID_NECESSIDADE = FOTO_NECESSIDADE.FK_NECESSIDADE_ID_NECESSIDADE)
+            INNER JOIN CATEGORIA_NECESSIDADE ON(NECESSIDADE.FK_CATEGORIA_NECESSIDADE_ID_CATEGORIA = CATEGORIA_NECESSIDADE.ID_CATEGORIA)
+            INNER JOIN REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE ON(PESSOA.ID_PESSOA = REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_REQ_NECESSIDADE ON(REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE.FK_STATUS_REQ_NECESSIDADE_ID_MENSAGEM_STATUS = STATUS_REQ_NECESSIDADE.ID_MENSAGEM_STATUS)
+            INNER JOIN POSSIBILITA_AJUDA ON(REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE.ID = POSSIBILITA_AJUDA.FK_REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE_ID)
+            INNER JOIN ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG ON (PESSOA.ID_PESSOA = ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG.FK_PESSOA_ID_PESSOA)
+            INNER JOIN MENSAGEM_NECESSIDADE ON(POSSIBILITA_AJUDA.FK_MENSAGEM_NECESSIDADE_ID_MENSAGEM = MENSAGEM_NECESSIDADE.ID_MENSAGEM AND ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG.FK_MENSAGEM_NECESSIDADE_ID_MENSAGEM = MENSAGEM_NECESSIDADE.ID_MENSAGEM)
+            INNER JOIN STATUS_MENSAGEM_NEC ON(MENSAGEM_NECESSIDADE.FK_STATUS_MENSAGEM_NEC_ID_STATUS = STATUS_MENSAGEM_NEC.ID_STATUS)
+            GROUP BY PESSOA.ID_PESSOA,
+            AVALIACAO_USUARIO.ID_AVALIACAO,
+            ITEM_DOACAO.ID_DOACAO,
+            CATEGORIA.ID_CATEGORIA,
+            ESTADO_ITEM.ID_ESTADO,
+            FOTO.ID_FOTO,
+            MENSAGEM_REQUISICAO.ID_MENSAGEM,
+            STATUS_REQUISICAO.ID_STATUS,
+            STATUS_MENSAGEM.ID_MENSAGEM_STATUS,
+            NECESSIDADE.ID_NECESSIDADE,
+            FOTO_NECESSIDADE.ID_FOTO,
+            CATEGORIA_NECESSIDADE.ID_CATEGORIA,
+            MENSAGEM_NECESSIDADE.ID_MENSAGEM,
+            STATUS_MENSAGEM_NEC.ID_STATUS,
+            STATUS_REQ_NECESSIDADE.ID_MENSAGEM_STATUS
+            ORDER BY PESSOA.ID_PESSOA""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i)
+            
+            Junção de todas as tabelas do banco
+            (1, 'Jos Ricardo', 93596493099, 6, 5, 'Muito excelente! :)', 9, 'Doo pastas de dente', 'Utenslios', 'C:\\d\\9\\image.png', 'Novo', 'Em andamento', 'Eae meu bom', 'Recebida', 'Preciso de alimentos', 'C:\\n\\1\\image.png', 'Alimenticios', 'Koe', 'Recebida', '(1,"Em andamento")')
+            (2, 'Mrcia Riveiro', 6945386040, 7, 5, 'Muito excelente! :)', 3, 'Mesa de ao enferrujada', 'Mveis', 'C:\\d\\3\\image.png', 'Quebrado', 'Em andamento', 'Boa noite senhor', 'Recebida', 'Preciso de cadeiras', 'C:\\n\\4\\image.png', 'Mveis', 'Bom jovem?', 'Recebida', '(1,"Em andamento")')
+            (2, 'Mrcia Riveiro', 6945386040, 7, 5, 'Muito excelente! :)', 12, 'Estou doando tapete velho', 'Utilitrios', 'C:\\d\\12\\image.png', 'Quebrado', 'Em andamento', 'Boa noite senhor', 'Recebida', 'Preciso de cadeiras', 'C:\\n\\4\\image.png', 'Mveis', 'Bom jovem?', 'Recebida', '(1,"Em andamento")')
+  
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+        
+            print("Reputação de uma pessoa")
+            cur.execute("""SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",
+            PESSOA.NOME,
+            AVG(NOTA) AS "MEDIA"
+            FROM PESSOA
+            INNER JOIN AVALIACAO_USUARIO ON(PESSOA.ID_PESSOA = AVALIACAO_USUARIO.FK_PESSOA_ID_PESSOA_)
+            GROUP BY PESSOA.ID_PESSOA""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Reputação de uma pessoa
+            (2, 'Mrcia Riveiro', Decimal('5.0000000000000000')) 
+
+            (7, 'Tenrio Silva', Decimal('5.0000000000000000')) 
+
+            (1, 'Jos Ricardo', Decimal('5.0000000000000000')) 
+
+            (5, 'Marilda Teixeira', Decimal('4.6000000000000000')) 
+            
+            print("Pessoas que doam e suas doações")
+            cur.execute("""SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",
+            PESSOA.NOME,
+            ITEM_DOACAO.ID_DOACAO AS "ID DA DOAÇÃO",
+            ITEM_DOACAO.TITULO,
+            FOTO.CAMINHO,
+            CATEGORIA.NOME,
+            CATEGORIA.VALOR_MEDIO,
+            ESTADO_ITEM.NOME,
+            ITEM_DOACAO.RUA,
+            ITEM_DOACAO.BAIRRO,
+            ITEM_DOACAO.CIDADE,
+            ITEM_DOACAO.ESTADO
+            FROM PESSOA
+            INNER JOIN ITEM_DOACAO ON(PESSOA.ID_PESSOA = ITEM_DOACAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN CATEGORIA ON(ITEM_DOACAO.FK_CATEGORIA_ID_CATEGORIA = CATEGORIA.ID_CATEGORIA)
+            INNER JOIN FOTO ON(ITEM_DOACAO.ID_DOACAO = FOTO.FK_ITEM_DOACAO_ID_DOACAO)
+            INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)
+            GROUP BY PESSOA.ID_PESSOA,ITEM_DOACAO.ID_DOACAO,FOTO.ID_FOTO,CATEGORIA.ID_CATEGORIA,ESTADO_ITEM.ID_ESTADO
+            ORDER BY PESSOA.ID_PESSOA""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Pessoas que doam e suas doações
+            (1, 'Jos Ricardo', 9, 'Doo pastas de dente', 'C:\\d\\9\\image.png', 'Utenslios', 100, 'Novo', 'Avenida Vitria', 'Centro', 'Linhares', 'ES') 
+
+            (2, 'Mrcia Riveiro', 3, 'Mesa de ao enferrujada', 'C:\\d\\3\\image.png', 'Mveis', 500, 'Quebrado', 'Rua Guimares Jnior', 'Jardim Limoeiro', 'Serra', 'ES') 
+
+            (2, 'Mrcia Riveiro', 12, 'Estou doando tapete velho', 'C:\\d\\12\\image.png', 'Utilitrios', 100, 'Quebrado', 'Rua Sandlio Abaurre', 'Bairro de Lourdes', 'Vitria', 'ES') 
+
+            (3, 'Carlos augusto', 2, 'Doo tnis velho em bom estado', 'C:\\d\\2\\image.png', 'Vestimentas', 250, 'Usado', 'Rua Presidente Getlio Vargas', 'Ftima', 'Aracruz', 'ES') 
+
+            (4, 'Heberson Machado', 7, 'Lousa digital quebrada', 'C:\\d\\7\\image.png', 'Eletrnicos', 350, 'Usado', 'Avenida Doutor Olvio Lira', 'Praia da Costa', 'Vila Velha', 'ES') 
+
+            (5, 'Marilda Teixeira', 6, 'Mochila usada', 'C:\\d\\6\\image.png', 'Utilitrios', 100, 'Usado', 'Rua Belas Artes', 'Aribiri', 'Vila Velha', 'ES') 
+
+            (5, 'Marilda Teixeira', 13, 'Estou doando leite lacrado', 'C:\\d\\13\\image.png', 'Alimenticios', 150, 'Novo', 'Rua Elizana Casteglioni', 'Itapina', 'Colatina', 'ES') 
+
+            (6, 'Felipe Gonalves', 11, 'Doo cesta de frutas', 'C:\\d\\11\\image.png', 'Alimenticios', 150, 'Novo', 'Rua Rio de Janeiro', 'Parque Residencial de Tubaro', 'Serra', 'ES') 
+
+            (8, 'Ronaldo Nandes', 10, 'Sapatos velhos', 'C:\\d\\10\\image.png', 'Vestimentas', 250, 'Usado', 'Avenida Manoel Bermudes', 'Jardim Tropical', 'Serra', 'ES') 
+
+            (9, 'Renato Oliveira', 17, 'Doao de ternos', 'C:\\d\\17\\image.png', 'Vestimentas', 250, 'Usado', 'Travessa das Crianas III', 'Carapina Grande', 'Serra', 'ES') 
+
+            (11, 'Vinicius Marques', 15, 'Estou doando mouse com um lado funcionando', 'C:\\d\\15\\image.png', 'Eletrnicos', 350, 'Quebrado', 'Rua Caboclinho', 'Pontal do Ipiranga', 'Linhares', 'ES') 
+
+            (12, 'Taylor Schuitz', 14, 'Doo estojos', 'C:\\d\\14\\image.png', 'Utilitrios', 100, 'Usado', 'Rua Santa Leopoldina', 'Jardim Carapina', 'Serra', 'ES') 
+
+            (13, 'Mnica Ramos', 1, 'Notebook Acer usado em perfeito estado', 'C:\\d\\1\\image.png', 'Eletrnicos', 350, 'Usado', 'Rua Marlin Azul', 'Estrelinha', 'Vitria', 'ES') 
+
+            (13, 'Mnica Ramos', 18, 'Estou doando Game Boy antigo', 'C:\\d\\18\\image.png', 'Brinquedos', 50, 'Usado', 'Rua Boapaba', 'Rio Marinho', 'Vila Velha', 'ES') 
+
+            (13, 'Mnica Ramos', 20, 'Notebook Positivo usado em perfeito estado', 'C:\\d\\20\\image.png', 'Eletrnicos', 350, 'Usado', 'Rua Marlin Azul', 'Estrelinha', 'Vitria', 'ES') 
+
+            (17, 'Cleiton Alves', 5, 'Doo fogo velho a lenha', 'C:\\d\\5\\image.png', 'Mveis', 500, 'Usado', 'Rua dos Gaturanos', 'Porto Canoa', 'Serra', 'ES') 
+
+            (18, 'Marcelo de Jesus', 4, 'Estou doando roupas velhas de inverno', 'C:\\d\\4\\image.png', 'Vestimentas', 250, 'Usado', 'Praa Waldir Furtado Amorim', 'Waldir Furtado de Amorim', 'Cachoeiro de Itapemirim', 'ES') 
+
+            (18, 'Marcelo de Jesus', 16, 'Estou doando Fusca Velho', 'C:\\d\\16\\image.png', 'Automotivos', 1000, 'Quebrado', 'Rua Olavo Bilac', 'Morada da Barra', 'Vila Velha', 'ES') 
+
+            (20, 'Joseph Brendam', 8, 'Capinha de iPhone', 'C:\\d\\8\\image.png', 'Utilitrios', 100, 'Usado', 'Escadaria Argemiro de Andrade', 'Zumbi', 'Cachoeiro do Itapemirim', 'ES') 
+
+            (20, 'Joseph Brendam', 19, 'Doo Barbie careca', 'C:\\d\\19\\image.png', 'Brinquedos', 50, 'Quebrado', 'Rua Elder Azevedo', 'Povoao', 'Linhares', 'ES') 
+            
+            print("Ongs com necessidades e suas necessidades")
+            cur.execute("""SELECT ONG.ID_ONG,
+            ONG.NOME,
+            NECESSIDADE.ID_NECESSIDADE,
+            NECESSIDADE.TITULO,
+            CATEGORIA_NECESSIDADE.NOME,
+            CATEGORIA_NECESSIDADE.VALOR_MEDIO,
+            FOTO_NECESSIDADE.CAMINHO,
+            NECESSIDADE.RUA,
+            NECESSIDADE.BAIRRO,
+            NECESSIDADE.CIDADE,
+            NECESSIDADE.ESTADO 
+            FROM ONG
+            INNER JOIN EXPOE_PESSOA_NECESSIDADE_ONG ON (ONG.ID_ONG = EXPOE_PESSOA_NECESSIDADE_ONG.FK_ONG_ID_ONG)
+            INNER JOIN NECESSIDADE ON(EXPOE_PESSOA_NECESSIDADE_ONG.FK_NECESSIDADE_ID_NECESSIDADE = NECESSIDADE.ID_NECESSIDADE)
+            INNER JOIN FOTO_NECESSIDADE ON(NECESSIDADE.ID_NECESSIDADE = FOTO_NECESSIDADE.FK_NECESSIDADE_ID_NECESSIDADE)
+            INNER JOIN CATEGORIA_NECESSIDADE ON(NECESSIDADE.FK_CATEGORIA_NECESSIDADE_ID_CATEGORIA = CATEGORIA_NECESSIDADE.ID_CATEGORIA)
+            GROUP BY ONG.ID_ONG, NECESSIDADE.ID_NECESSIDADE, FOTO_NECESSIDADE.ID_FOTO, CATEGORIA_NECESSIDADE.ID_CATEGORIA
+            ORDER BY ONG.ID_ONG""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Ongs com necessidades e suas necessidades
+            (1, 'Fundao Pedro Nolasco', 2, 'Necessitamos de roupas', 'Vestimentas', 250, 'C:\\n\\2\\image.png', 'Rua Graviola', 'Cidade Pomar', 'Serra', 'ES') 
+
+            (2, 'Projeto Leitura e Ensino', 3, 'Estamos sem alimentos', 'Alimenticios', 150, 'C:\\n\\3\\image.png', 'Rua Graviola', 'Cidade Pomar', 'Serra', 'ES') 
+
+            (3, 'Clube Esportivo para Jovens', 6, 'Necessitamos equipamentos esportivos', 'Utilitrios', 100, 'C:\\n\\6\\image.png', 'Rua Paulo Rodrigues', 'Tucum', 'Cariacica', 'ES') 
+
+            (4, 'Fundao Alberto Seixas', 7, 'Precisamos de livros', 'Utilitrios', 100, 'C:\\n\\7\\image.png', 'Rua Hannibal Barca', 'Praia de Carapebus', 'Serra', 'ES') 
+
+            (5, 'Projeto Vida Digna', 8, 'Procura-se roupas de inverno', 'Vestimentas', 250, 'C:\\n\\8\\image.png', 'Rua Cndido Portinari', 'das Laranjeiras', 'Serra', 'ES') 
+
+            (6, 'Casa de Recuperao Naam', 15, 'Precisamos de rao para nossos cachorros', 'Alimenticios', 150, 'C:\\n\\15\\image.png', 'Rua Joo Vitali', 'Fazenda Vitali', 'Colatina', 'ES') 
+
+            (7, 'Instituio Manasss', 16, 'Necessitamos de po para o caf da manh', 'Alimenticios', 150, 'C:\\n\\16\\image.png', 'Rua Tina Mazzelli de Almeida', 'Jardim Santa Rosa', 'Guarapari', 'ES') 
+
+            (8, 'Luta pelo Futuro', 17, 'Precisamos de fraudas', 'Utenslios', 100, 'C:\\n\\17\\image.png', 'Avenida Antnio Gil Veloso', 'Itapu', 'Vila Velha', 'ES') 
+
+            (9, 'Proteo a Mata Atlntica', 18, 'Precisamos de remdios', 'Utenslios', 100, 'C:\\n\\18\\image.png', 'Rua Pedro Corra', 'Inhanguet', 'Vitria', 'ES') 
+
+            (10, 'Direitos dos Surdos', 19, 'Preciso de uma prtese', 'Utilitrios', 100, 'C:\\n\\19\\image.png', 'Avenida Brasil', 'So Diogo II', 'Serra', 'ES') 
+
+            (11, 'Aiesec em Vitria', 20, 'Precisamos de sementes', 'Alimenticios', 150, 'C:\\n\\20\\image.png', 'Rua Geraldo Ribeiro', 'Pitanga', 'Serra', 'ES') 
+           
+            print("Pessoas com necessidades e suas necessidades")
+            cur.execute("""SELECT PESSOA.ID_PESSOA,
+            PESSOA.NOME,
+            NECESSIDADE.ID_NECESSIDADE,
+            NECESSIDADE.TITULO,
+            CATEGORIA_NECESSIDADE.NOME,
+            CATEGORIA_NECESSIDADE.VALOR_MEDIO,
+            FOTO_NECESSIDADE.CAMINHO,
+            NECESSIDADE.RUA,
+            NECESSIDADE.BAIRRO,
+            NECESSIDADE.CIDADE,
+            NECESSIDADE.ESTADO 
+            FROM PESSOA
+            INNER JOIN EXPOE_PESSOA_NECESSIDADE_ONG ON (PESSOA.ID_PESSOA = EXPOE_PESSOA_NECESSIDADE_ONG.FK_PESSOA_ID_PESSOA)
+            INNER JOIN NECESSIDADE ON(EXPOE_PESSOA_NECESSIDADE_ONG.FK_NECESSIDADE_ID_NECESSIDADE = NECESSIDADE.ID_NECESSIDADE)
+            INNER JOIN FOTO_NECESSIDADE ON(NECESSIDADE.ID_NECESSIDADE = FOTO_NECESSIDADE.FK_NECESSIDADE_ID_NECESSIDADE)
+            INNER JOIN CATEGORIA_NECESSIDADE ON(NECESSIDADE.FK_CATEGORIA_NECESSIDADE_ID_CATEGORIA = CATEGORIA_NECESSIDADE.ID_CATEGORIA)
+            GROUP BY PESSOA.ID_PESSOA, NECESSIDADE.ID_NECESSIDADE, FOTO_NECESSIDADE.ID_FOTO, CATEGORIA_NECESSIDADE.ID_CATEGORIA
+            ORDER BY PESSOA.ID_PESSOA""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Pessoas com necessidades e suas necessidades
+            (1, 'Jos Ricardo', 1, 'Preciso de alimentos', 'Alimenticios', 150, 'C:\\n\\1\\image.png', 'Rua Joo Fregona', 'Interlagos', 'Linhares', 'ES') 
+
+            (2, 'Mrcia Riveiro', 4, 'Preciso de cadeiras', 'Mveis', 500, 'C:\\n\\4\\image.png', 'Rua So Joo Del Rei', 'Novo Horizonte', 'Cariacica', 'ES') 
+
+            (3, 'Carlos augusto', 5, 'Estamos sem pasta de dente', 'Utenslios', 100, 'C:\\n\\5\\image.png', 'Rua Cedro', 'Serra Dourada I', 'Serra', 'ES') 
+
+            (7, 'Tenrio Silva', 9, 'Necessito de mochila', 'Utilitrios', 100, 'C:\\n\\9\\image.png', 'Praa Joo Clmaco 10', 'Centro', 'Vitria', 'ES') 
+
+            (9, 'Renato Oliveira', 10, 'Busco sof', 'Mveis', 500, 'C:\\n\\10\\image.png', 'Rua Grana', 'Vila Nova de Colares', 'Serra', 'ES') 
+
+            (11, 'Vinicius Marques', 11, 'Preciso de fraudas', 'Utenslios', 100, 'C:\\n\\11\\image.png', 'Rua Manoel Laurentino', 'Itacib', 'Cariacica', 'ES') 
+
+            (13, 'Mnica Ramos', 13, 'Preciso de produtos de limpeza', 'Utenslios', 100, 'C:\\n\\13\\image.png', 'Rua Anjico', 'Colina de Laranjeiras', 'Serra', 'ES') 
+
+            (17, 'Cleiton Alves', 12, 'Necessito de cesta bsica', 'Alimenticios', 150, 'C:\\n\\12\\image.png', 'Alameda Norte', 'Alphaville Jacuhy', 'Serra', 'ES') 
+
+            (18, 'Marcelo de Jesus', 14, 'Preciso de papel higinico', 'Utenslios', 100, 'C:\\n\\14\\image.png', 'Travessa Annor da Silva', 'Residencial Coqueiral', 'Serra', 'ES')
+            
+            print("Pessoas e suas requisições de doação")
+            cur.execute("""SELECT PESSOA.ID_PESSOA,
+            PESSOA.NOME,
+            REQUISITA_DOACAO_REQUISITA.ID,
+            STATUS_REQUISICAO.NOME,
+            ITEM_DOACAO.TITULO,
+            CATEGORIA.NOME,
+            CATEGORIA.VALOR_MEDIO,
+            ITEM_DOACAO.RUA,
+            ITEM_DOACAO.BAIRRO,
+            ITEM_DOACAO.CIDADE,
+            ITEM_DOACAO.ESTADO,
+            ESTADO_ITEM.NOME
+            FROM PESSOA
+            INNER JOIN REQUISITA_DOACAO_REQUISITA ON(PESSOA.ID_PESSOA = REQUISITA_DOACAO_REQUISITA.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_REQUISICAO ON(REQUISITA_DOACAO_REQUISITA.FK_STATUS_REQUISICAO_ID_STATUS = STATUS_REQUISICAO.ID_STATUS)
+            INNER JOIN ITEM_DOACAO ON(REQUISITA_DOACAO_REQUISITA.FK_ITEM_DOACAO_ID_DOACAO = ITEM_DOACAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN CATEGORIA ON(ITEM_DOACAO.FK_CATEGORIA_ID_CATEGORIA = CATEGORIA.ID_CATEGORIA)
+            INNER JOIN FOTO ON(ITEM_DOACAO.ID_DOACAO = FOTO.FK_ITEM_DOACAO_ID_DOACAO)
+            INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)
+            GROUP BY PESSOA.ID_PESSOA, ITEM_DOACAO.ID_DOACAO, FOTO.ID_FOTO, CATEGORIA.ID_CATEGORIA, ESTADO_ITEM.ID_ESTADO, REQUISITA_DOACAO_REQUISITA.ID, STATUS_REQUISICAO.ID_STATUS
+            ORDER BY PESSOA.ID_PESSOA""")
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Pessoas e suas requisições de doação
+            (2, 'Mrcia Riveiro', 1, 'Em andamento', 'Mochila usada', 'Utilitrios', 100, 'Rua Belas Artes', 'Aribiri', 'Vila Velha', 'ES', 'Usado') 
+
+            (2, 'Mrcia Riveiro', 7, 'Em andamento', 'Lousa digital quebrada', 'Eletrnicos', 350, 'Avenida Doutor Olvio Lira', 'Praia da Costa', 'Vila Velha', 'ES', 'Usado') 
+
+            (2, 'Mrcia Riveiro', 1, 'Em andamento', 'Estou doando leite lacrado', 'Alimenticios', 150, 'Rua Elizana Casteglioni', 'Itapina', 'Colatina', 'ES', 'Novo') 
+
+            (5, 'Marilda Teixeira', 5, 'Finalizada', 'Doo pastas de dente', 'Utenslios', 100, 'Avenida Vitria', 'Centro', 'Linhares', 'ES', 'Novo') 
+
+            (7, 'Tenrio Silva', 8, 'Em andamento', 'Mesa de ao enferrujada', 'Mveis', 500, 'Rua Guimares Jnior', 'Jardim Limoeiro', 'Serra', 'ES', 'Quebrado') 
+
+            (7, 'Tenrio Silva', 8, 'Em andamento', 'Estou doando tapete velho', 'Utilitrios', 100, 'Rua Sandlio Abaurre', 'Bairro de Lourdes', 'Vitria', 'ES', 'Quebrado') 
+
+            (9, 'Renato Oliveira', 4, 'Em andamento', 'Doo tnis velho em bom estado', 'Vestimentas', 250, 'Rua Presidente Getlio Vargas', 'Ftima', 'Aracruz', 'ES', 'Usado') 
+            
+            print("Pessoas e suas mensagens enviadas para doações")
+            cur.execute("""SELECT PESSOA.ID_PESSOA,
+            PESSOA.NOME,
+            ITEM_DOACAO.TITULO,
+            MENSAGEM_REQUISICAO.ID_MENSAGEM,
+            MENSAGEM_REQUISICAO.CONTEUDO,
+            MENSAGEM_REQUISICAO.DATA1,
+            MENSAGEM_REQUISICAO.HORA,
+            STATUS_MENSAGEM.NOME
+            FROM PESSOA
+            INNER JOIN REQUISITA_DOACAO_REQUISITA ON(PESSOA.ID_PESSOA = REQUISITA_DOACAO_REQUISITA.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_REQUISICAO ON(REQUISITA_DOACAO_REQUISITA.FK_STATUS_REQUISICAO_ID_STATUS = STATUS_REQUISICAO.ID_STATUS)
+            INNER JOIN ITEM_DOACAO ON(REQUISITA_DOACAO_REQUISITA.FK_ITEM_DOACAO_ID_DOACAO = ITEM_DOACAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN POSSIBILITA ON(REQUISITA_DOACAO_REQUISITA.ID = POSSIBILITA.FK_REQUISITA_DOACAO_REQUISITA_ID)
+            INNER JOIN MENSAGEM_REQUISICAO ON(POSSIBILITA.FK_MENSAGEM_REQUISICAO_ID_MENSAGEM = MENSAGEM_REQUISICAO.ID_MENSAGEM AND PESSOA.ID_PESSOA = MENSAGEM_REQUISICAO.FK_PESSOA_ID_PESSOA)
+            INNER JOIN STATUS_MENSAGEM ON(MENSAGEM_REQUISICAO.FK_STATUS_MENSAGEM_ID_MENSAGEM_STATUS = STATUS_MENSAGEM.ID_MENSAGEM_STATUS)
+            INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)
+            GROUP BY PESSOA.ID_PESSOA, ITEM_DOACAO.ID_DOACAO,REQUISITA_DOACAO_REQUISITA.ID, STATUS_MENSAGEM.ID_MENSAGEM_STATUS, MENSAGEM_REQUISICAO.ID_MENSAGEM
+            ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM
+            """)
+            dados = cur.fetchall()
+            for i in dados:
+              print(i,"\n")
+              
+            Pessoas e suas mensagens enviadas para doações
+            (5, 'Marilda Teixeira', 'Doo pastas de dente', 1, 'Ol, boa noite. Gostaria de saber qual as especificaes do computador.', datetime.date(2019, 10, 18), datetime.time(20, 19), 'Visualizada') 
+
+            (5, 'Marilda Teixeira', 'Doo pastas de dente', 3, 'Entendi... Estou interessado, podemos nos encontrar no endereo ou tem mais algum na espera?', datetime.date(2019, 10, 18), datetime.time(20, 22), 'Visualizada') 
+
+            (5, 'Marilda Teixeira', 'Doo pastas de dente', 5, 'Muito obrigado, senhor. Farei bom uso do seu computador', datetime.date(2019, 10, 18), datetime.time(20, 25), 'Visualizada') 
+
+            (2, 'Mrcia Riveiro', 'Lousa digital quebrada', 7, 'Boa noite senhor', datetime.date(2019, 10, 19), datetime.time(21, 25), 'Recebida') 
+
+            (7, 'Tenrio Silva', 'Mesa de ao enferrujada', 8, 'Opa, beleza?', datetime.date(2019, 10, 19), datetime.time(22, 25), 'Recebida') 
+
+            (7, 'Tenrio Silva', 'Estou doando tapete velho', 8, 'Opa, beleza?', datetime.date(2019, 10, 19), datetime.time(22, 25), 'Recebida') 
 
 >## Marco de Entrega 02 em: 21/10/2019<br>
 
