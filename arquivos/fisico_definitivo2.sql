@@ -195,12 +195,12 @@ ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requis
  
 ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_3
     FOREIGN KEY (fk_pessoa_ID_pessoa)
-    REFERENCES pessoa (ID_pessoa);
+    REFERENCES pessoa (ID_pessoa)
     ON DELETE NO ACTION;
  
 ALTER TABLE requisita_doacao_requisita ADD CONSTRAINT FK_requisita_doacao_requisita_4
     FOREIGN KEY (fk_item_doacao_ID_doacao)
-    REFERENCES item_doacao (ID_doacao);
+    REFERENCES item_doacao (ID_doacao)
     ON DELETE NO ACTION;
  
 ALTER TABLE foto ADD CONSTRAINT FK_foto_2
