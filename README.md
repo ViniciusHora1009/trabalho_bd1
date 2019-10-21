@@ -170,7 +170,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+    Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzdC2vvJ6_o#scrollTo=lpJY9Sk3GGhc
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 ![Arquivo sql com consultas](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/consultawhere.sql)<br>
