@@ -96,8 +96,9 @@ CREATE TABLE necessidade (
     titulo VARCHAR(255),
     valor INTEGER,
     rua VARCHAR(255),
-    cidade VARCHAR(255),
     bairro VARCHAR(255),
+    cidade VARCHAR(255),
+    estado VARCHAR(255),
     latitude DECIMAL(50),
     longitude DECIMAL(50),
     fk_categoria_necessidade_ID_categoria INTEGER
