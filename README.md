@@ -157,8 +157,8 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico_atualizadov3.png "Modelo Conceitual")
-![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logico_atualizadov3.brM3 "Modelo físico")<br>
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico.png "Modelo Conceitual")
+![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logicobrM3 "Modelo físico")<br>
 
 ### 7	MODELO FÍSICO<br>
 ![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/fisico_atualizadov3.sql "Modelo físico")<br>
