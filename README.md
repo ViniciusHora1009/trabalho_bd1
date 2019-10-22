@@ -37,8 +37,8 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual_atualizadov2.png "Modelo Conceitual")
-![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual_atualizadov3.brM3 "Modelo conceitual")<br>
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual.png "Modelo Conceitual")
+![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/appDoacoes_UML.pdf "Diagrama de classes")
