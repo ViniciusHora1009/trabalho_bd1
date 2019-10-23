@@ -6,7 +6,7 @@ CREATE TABLE pessoa (
     num_celular BIGINT,
     email VARCHAR(255),
     data_nascimento DATE,
-    saldo DECIMAL(10),
+    saldo INTEGER,
     nome VARCHAR(255)
 );
 
