@@ -62,8 +62,6 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         ID_ONG: Campo que armazena o código de identificação de cada ONG usuária do sistema.<br>
         CNPJ: Campo que armazena o cnpj de cada ONG usuária do sistema.<br>
         EMAIL: Campo que armazena o email de cada ONG usuária do sistema.<br>
-        LATITUDE: Campo que armazena a latitude da localização de cada ONG usuária do sistema.<br>
-        LONGITUDE: Campo que armazena o longitude da localização de cada ONG usuária do sistema.<br>
         NUM_CONTATO: Campo que armazena o número de contato de cada ONG usuária do sistema.<br>
         NOME: Campo que armazena o nome de cada ONG usuária do sistema.<br>
         RUA: Campo que armazena a rua de encontro de uma doação.<br>
@@ -80,8 +78,6 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
         ID_DOACAO: Campo que armazena o código de identificação de uma doação cadastrada.<br>
         TITULO: Campo que armazena o título identificador que o usuário escreveu para sua doação.<br>
         DESCRICAO: Campo que armazena o a descrição (texto) que o usuário escreveu sobre sua doação.<br>
-        LATITUDE: Campo que armazena a latitude do local onde a doação será concretizada.<br>
-        LONGITUDE: Campo que armazena a longitude do local onde a doação será concretizada.<br>
         RUA: Campo que armazena a rua de encontro de uma doação.<br>
         BAIRRO: Campo que armazena o bairro de encontro de uma doação.<br>
         CIDADE: Campo que armazena a cidade de encontro de uma doação.<br>
@@ -144,7 +140,23 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     STATUS_MENSAGEM_NEC: Tabela que armazena as informações sobre o Status da mensagem de no chat da necessidade.<br>
         ID_STATUS: Campo que armazena o código de identificação do status da mensagem.<br>
         NOME: Campo que armazena o nome do status da mensagem.<br>
+    
+    LOGRADOURO: Tabela que armazena as informações sobre um logradouro.<br>
+        CEP: Campo que armazena o código de identificação(CEP) de um logradouro.<br>
+        NOME: Campo que armazena o nome do logradouro.<br>
 
+    BAIRRO: Tabela que armazena as informações sobre um bairro.<br>
+        ID: Campo que armazena o código de identificação de um bairro.<br>
+        NOME: Campo que armazena o nome do bairro.<br>
+        
+    CIDADE: Tabela que armazena as informações sobre uma cidade.<br>
+        ID: Campo que armazena o código de identificação de uma cidade.<br>
+        NOME: Campo que armazena o nome da cidade.<br>       
+
+    ESTADO: Tabela que armazena as informações sobre um estado (local).<br>
+        ID: Campo que armazena o código de identificação de um estado.<br>
+        NOME: Campo que armazena o nome da estado.<br>     
+        
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema     
     a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
     Cria um usuário, pesquisa por uma doação e pesquisa por uma necessidade.
