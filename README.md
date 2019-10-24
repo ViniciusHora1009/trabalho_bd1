@@ -251,9 +251,34 @@ SELECT * FROM pessoa WHERE saldo > 500;
 ![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-4.PNG)<br>
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+SELECT * FROM item_doacao WHERE estado = 'ES' AND cidade = 'Vitória' AND bairro != 'Estrelinha';
+![9.3-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-1.PNG)<br>
+
+SELECT * FROM item_doacao WHERE estado = 'ES' OR estado = 'RJ';
+![9.3-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-2.PNG)<br>
+
+SELECT * FROM item_doacao WHERE estado = 'ES' AND (cidade = 'Vitória' OR  cidade = 'Vila Velha');
+![9.3-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-3.PNG)<br>
+
+SELECT * FROM requisicao_ajuda_supre_pessoa_ong_necessidade WHERE fk_pessoa_id_pessoa IS NOT null;
+![9.3-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-4.PNG)<br>
+
+SELECT * FROM PESSOA WHERE saldo >= 50 AND saldo <= 100 ORDER BY saldo;
+![9.3-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-5.PNG)<br>
+
+SELECT * FROM PESSOA WHERE saldo = 0;
+![9.3-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-6.PNG)<br>
+
+SELECT * FROM PESSOA WHERE saldo > 500 ORDER BY saldo;
+![9.3-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-7.PNG)<br>
+
+SELECT * FROM CATEGORIA_NECESSIDADE WHERE valor_medio < 350 ORDER BY valor_medio;
+![9.3-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-8.PNG)<br>
+
+ALTER TABLE categoria RENAME nome TO "nome_categoria";
+ALTER TABLE categoria_necessidade RENAME nome TO nome_categoria;
+ALTER TABLE estado_item RENAME nome TO condicao;
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
