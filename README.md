@@ -276,9 +276,9 @@ SELECT * FROM PESSOA WHERE saldo > 500 ORDER BY saldo;
 SELECT * FROM CATEGORIA_NECESSIDADE WHERE valor_medio < 350 ORDER BY valor_medio;
 ![9.3-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-8.PNG)<br>
 
-ALTER TABLE categoria RENAME nome TO "nome_categoria";
-ALTER TABLE categoria_necessidade RENAME nome TO nome_categoria;
-ALTER TABLE estado_item RENAME nome TO condicao;
+ALTER TABLE categoria RENAME nome TO "nome_categoria";<br>
+ALTER TABLE categoria_necessidade RENAME nome TO nome_categoria;<br>
+ALTER TABLE estado_item RENAME nome TO condicao;<br>
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
