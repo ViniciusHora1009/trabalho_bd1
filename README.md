@@ -217,6 +217,24 @@ SELECT * FROM FOTO_NECESSIDADE;<br>
 SELECT * FROM MENSAGEM_NECESSIDADE;<br>
 ![9.1-15](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-15.PNG "Tabela Mensagem Necessidade")<br>
 
+SELECT * FROM REQUISITA_DOACAO_REQUISITA;<br>
+![9.1-16](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-16.PNG "Tabela Requisita Doação Requisita")<br>
+
+SELECT * FROM INTO REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE;<br>
+![9.1-17](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-17.PNG "Tabela Requisição Ajuda Supre Pessoa Ong Necessidade")<br>
+
+SELECT * FROM EXPOE_PESSOA_NECESSIDADE_ONG;<br>
+![9.1-18](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-18.PNG "Tabela Expoe Pessoa Necessidade")<br>
+
+SELECT * FROM POSSIBILITA;<br>
+![9.1-19](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-19.PNG "Tabela Possibilita")<br>
+
+SELECT * FROM POSSIBILITA_AJUDA;<br>
+![9.1-20](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-20.PNG "Tabela Possibilita Ajuda")<br>
+
+SELECT * FROM ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG;<br>
+![9.1-21](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-21.PNG "Tabela Envia Pessoa Mensagem Necessidade Ong")<br>
+
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 ![Arquivo sql com consultas](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/consultawhere.sql)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
