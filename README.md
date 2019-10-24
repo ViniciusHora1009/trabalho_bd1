@@ -172,6 +172,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzdC2vvJ6_o#scrollTo=lpJY9Sk3GGhc
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
 SELECT * FROM PESSOA;<br>
 ![9.1-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-1.PNG "Tabela Pessoa")<br>
 
@@ -236,7 +237,19 @@ SELECT * FROM ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG;<br>
 ![9.1-21](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-21.PNG "Tabela Envia Pessoa Mensagem Necessidade Ong")<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-![Arquivo sql com consultas](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/consultawhere.sql)<br>
+
+SELECT * FROM ong WHERE cidade = 'Cariacica';
+![9.2-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-1.PNG)<br>
+
+SELECT * FROM avaliacao_usuario WHERE nota = 5;
+![9.2-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-2.PNG)<br>
+
+SELECT * FROM categoria WHERE valor_medio < 200;
+![9.2-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-3.PNG)<br>
+
+SELECT * FROM pessoa WHERE saldo > 500;
+![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-4.PNG)<br>
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
