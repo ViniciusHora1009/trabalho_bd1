@@ -295,7 +295,7 @@ SELECT * FROM mensagem_requisicao WHERE conteudo LIKE '%?';
 ![9.4-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-4.PNG)<br>
 
 SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';
-![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-5.PNG)<br>
+![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-5.PNG)<br>
 
 SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';
 ![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-6.PNG)<br>
@@ -313,7 +313,7 @@ SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento))
 ![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-10.PNG)<br>
 
 SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nascimento))) FROM pessoa;
-![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-11.PNG)<br>
+![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.6-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ![Arquivo sql atualizações e exclusões](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/atualiza_deleta_dados.sql)<br>
