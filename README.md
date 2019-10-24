@@ -281,8 +281,39 @@ ALTER TABLE categoria_necessidade RENAME nome TO nome_categoria;<br>
 ALTER TABLE estado_item RENAME nome TO condicao;<br>
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+
+SELECT * FROM pessoa WHERE nome LIKE 'J%';
+![9.4-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-1.PNG)<br>
+
+SELECT * FROM pessoa WHERE nome LIKE '%a';
+![9.4-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-2.PNG)<br>
+
+SELECT * FROM pessoa WHERE nome LIKE '%Car%';
+![9.4-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-3.PNG)<br>
+
+SELECT * FROM mensagem_requisicao WHERE conteudo LIKE '%?';
+![9.4-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-4.PNG)<br>
+
+SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';
+![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-5.PNG)<br>
+
+SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';
+![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-6.PNG)<br>
+
+SELECT * FROM item_doacao WHERE descricao LIKE '%usad%';
+![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-7.PNG)<br>
+
+SELECT * FROM ONG WHERE nome ILIKE 'f%';
+![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-8.PNG)<br>
+
+SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';
+![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-9.PNG)<br>
+
+SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;
+![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-10.PNG)<br>
+
+SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nascimento))) FROM pessoa;
+![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ![Arquivo sql atualizações e exclusões](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/atualiza_deleta_dados.sql)<br>
