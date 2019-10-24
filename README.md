@@ -172,6 +172,51 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzdC2vvJ6_o#scrollTo=lpJY9Sk3GGhc
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+SELECT * FROM PESSOA;<br>
+![9.1-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-1.PNG "Tabela Pessoa")<br>
+
+SELECT * FROM AVALIACAO_USUARIO;<br>
+![9.1-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-2.PNG "Tabela Avaliação Usuário")<br>
+
+SELECT * FROM ONG;<br>
+![9.1-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-3.PNG "Tabela Ong")<br>
+
+SELECT * FROM CATEGORIA;<br>
+![9.1-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-4.PNG "Tabela Categoria")<br>
+
+SELECT * FROM ITEM_DOACAO;<br>
+![9.1-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-5.PNG "Tabela Item Doação")<br>
+
+SELECT * FROM FOTO;<br>
+![9.1-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-6.PNG "Tabela Foto")<br>
+
+SELECT * FROM STATUS_REQUISICAO;<br>
+![9.1-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-7.PNG "Tabela Status Requisição")<br>
+
+SELECT * FROM ESTADO_ITEM;<br>
+![9.1-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-8.PNG "Tabela Estado Item")<br>
+
+SELECT * FROM STATUS_REQ_NECESSIDADE;<br>
+![9.1-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-9.PNG "Tabela Status Req Necessidade")<br>
+
+SELECT * FROM MENSAGEM_REQUISICAO;<br>
+![9.1-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-10.PNG "Tabela Mensagem Requisição")<br>
+
+SELECT * FROM STATUS_MENSAGEM;<br>
+![9.1-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-11.PNG "Tabela Status Mensagem")<br>
+
+SELECT * FROM STATUS_MENSAGEM_NEC;<br>
+![9.1-12](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-12.PNG "Tabela Status Mensagem Nec")<br>
+
+SELECT * FROM NECESSIDADE;<br>
+![9.1-13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-13.PNG "Tabela Necessidade")<br>
+
+SELECT * FROM FOTO_NECESSIDADE;<br>
+![9.1-14](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-14.PNG "Tabela Foto Necessidade")<br>
+
+SELECT * FROM MENSAGEM_NECESSIDADE;<br>
+![9.1-15](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-15.PNG "Tabela Mensagem Necessidade")<br>
+
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 ![Arquivo sql com consultas](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/consultawhere.sql)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
