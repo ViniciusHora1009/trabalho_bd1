@@ -316,7 +316,30 @@ SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nasc
 ![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.6-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-![Arquivo sql atualizações e exclusões](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/atualiza_deleta_dados.sql)<br>
+
+UPDATE pessoa SET email = 'joser12@gmail.com' WHERE nome = 'José Ricardo';
+SELECT * FROM pessoa WHERE nome = 'José Ricardo';
+![9.5-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-1.PNG)<br>
+
+UPDATE ong SET num_contato = 33589741 WHERE nome = 'Fundação Pedro Nolasco';
+SELECT * FROM ong WHERE nome = 'Fundação Pedro Nolasco';
+![9.5-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-2.PNG)<br>
+
+UPDATE ong SET email = 'projvidadigna@hotmail.com' WHERE nome = 'Projeto Vida Digna';
+SELECT * FROM ong WHERE nome = 'Projeto Vida Digna';
+![9.5-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-3.PNG)<br>
+
+UPDATE ong SET email = 'lutapelofuturo@outlook.com' WHERE nome = 'Luta pelo Futuro';
+SELECT * FROM ong WHERE nome = 'Luta pelo Futuro';
+![9.5-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-4.PNG)<br>
+
+UPDATE pessoa SET email = 'emailapp@gmail.com' WHERE nome = 'Heberson Machado';
+SELECT * FROM pessoa WHERE nome = 'Heberson Machado';
+![9.5-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-5.PNG)<br>
+
+UPDATE ong SET email = 'direitos.dos.surdos@gmail.com' WHERE nome = 'Direitos dos Surdos';
+SELECT * FROM ong WHERE nome = 'Direitos dos Surdos';
+![9.5-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-6.PNG)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
