@@ -298,22 +298,22 @@ SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';
 ![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-5.PNG)<br>
 
 SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';
-![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-6.PNG)<br>
+![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-6.PNG)<br>
 
 SELECT * FROM item_doacao WHERE descricao LIKE '%usad%';
-![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-7.PNG)<br>
+![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-7.PNG)<br>
 
 SELECT * FROM ONG WHERE nome ILIKE 'f%';
-![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-8.PNG)<br>
+![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-8.PNG)<br>
 
 SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';
-![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-9.PNG)<br>
+![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-9.PNG)<br>
 
 SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;
-![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-10.PNG)<br>
+![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-10.PNG)<br>
 
 SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nascimento))) FROM pessoa;
-![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-11.PNG)<br>
+![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ![Arquivo sql atualizações e exclusões](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/atualiza_deleta_dados.sql)<br>
