@@ -317,27 +317,27 @@ SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nasc
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
-UPDATE pessoa SET email = 'joser12@gmail.com' WHERE nome = 'José Ricardo';
+UPDATE pessoa SET email = 'joser12@gmail.com' WHERE nome = 'José Ricardo';<br>
 SELECT * FROM pessoa WHERE nome = 'José Ricardo';
 ![9.5-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-1.PNG)<br>
 
-UPDATE ong SET num_contato = 33589741 WHERE nome = 'Fundação Pedro Nolasco';
+UPDATE ong SET num_contato = 33589741 WHERE nome = 'Fundação Pedro Nolasco';<br>
 SELECT * FROM ong WHERE nome = 'Fundação Pedro Nolasco';
 ![9.5-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-2.PNG)<br>
 
-UPDATE ong SET email = 'projvidadigna@hotmail.com' WHERE nome = 'Projeto Vida Digna';
+UPDATE ong SET email = 'projvidadigna@hotmail.com' WHERE nome = 'Projeto Vida Digna';<br>
 SELECT * FROM ong WHERE nome = 'Projeto Vida Digna';
 ![9.5-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-3.PNG)<br>
 
-UPDATE ong SET email = 'lutapelofuturo@outlook.com' WHERE nome = 'Luta pelo Futuro';
+UPDATE ong SET email = 'lutapelofuturo@outlook.com' WHERE nome = 'Luta pelo Futuro';<br>
 SELECT * FROM ong WHERE nome = 'Luta pelo Futuro';
 ![9.5-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-4.PNG)<br>
 
-UPDATE pessoa SET email = 'emailapp@gmail.com' WHERE nome = 'Heberson Machado';
+UPDATE pessoa SET email = 'emailapp@gmail.com' WHERE nome = 'Heberson Machado';<br>
 SELECT * FROM pessoa WHERE nome = 'Heberson Machado';
 ![9.5-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-5.PNG)<br>
 
-UPDATE ong SET email = 'direitos.dos.surdos@gmail.com' WHERE nome = 'Direitos dos Surdos';
+UPDATE ong SET email = 'direitos.dos.surdos@gmail.com' WHERE nome = 'Direitos dos Surdos';<br>
 SELECT * FROM ong WHERE nome = 'Direitos dos Surdos';
 ![9.5-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-6.PNG)<br>
 
