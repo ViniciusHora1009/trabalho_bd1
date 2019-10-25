@@ -8,6 +8,7 @@ Integrantes do grupo<br>
 Vinicius da Hora Corte: vinicius.hora100@hotmail.com<br>
 Juliano Antônio da Silveira: julianoantonio.015@gmail.com<br>
 Gabriel Gonçalves da Costa: biel.costa26@gmail.com<br>
+Vitor Zanoni Bermudes: vitorzanonib@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 O sistema requisitado pelo cliente tem como propósito o gerenciamento dos usuários, tanto pessoas físicas quanto ONGs; e responsabiliza-se pelo fornecimento de meios para divulgação de suas doações e necessidades, além da comunicação entre ambas a parte a fim de interligar doador e necessitado para criar um ambiente de ajuda mútua onde todos são beneficiados.
