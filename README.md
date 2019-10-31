@@ -540,8 +540,9 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 
 
 #### 9.11 Relatórios e Gráficos
-**Histograma do saldo das pessoas**
 ![Arquivo Jupyter com integração com o ElephantSQL e geração de relatórios em gráfico](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/jupyter.ipynb)<br>
+
+**Histograma do saldo das pessoas**
 
 ![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/1.PNG)<br>
 
