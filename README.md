@@ -578,7 +578,15 @@ Análise: Alimentícios, Automotivos e utilitários são as doações mais comun
 
 Análise: Alimentícios e eletrônicos são as maiores necessidades das pessoas. Vestimentas e utensílios são os menos pedidos.<br>
 
->## Marco de Entrega 03 em: 04/11/2019<br>
+**Gráfico do status das requisições de doações**
+![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/8.PNG)<br>
+
+Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
+
+**Gráfico do status das requisições de ajuda a necessitados**
+![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.PNG)<br>
+
+Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 #### a) Pontos Chave do MINI-MUNDO
