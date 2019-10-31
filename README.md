@@ -539,10 +539,43 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
 
-#### 9.11 Relatórios e Gráficos 
-    a)análises e resultados provenientes do banco de dados
+#### 9.11 Relatórios e Gráficos
+Histograma do saldo das pessoas
+![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/1.PNG)<br>
 
->## Marco de Entrega 03 em:<br>
+Análise: A maioria das pessoas têm pouco saldo, somente uma pequena parcela tem o suficiente para requisitar doações sem preocupação.<br>
+
+Histograma do número de doações das pessoas
+![Gráfico 2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/2.PNG)<br>
+
+Análise: A maioria doa pelo menos uma doação, poucos doam mais que isso.<br>
+
+Histograma do número de necessidades das pessoas
+![Gráfico 3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/3.PNG)<br>
+
+Análise: As pessoas que possuem necessidade são minoria comparadas as que não possuem. Essas pessoas possuem somente uma necessidade.<br>
+
+Histograma do número de requisições de doação das pessoas
+![Gráfico 4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/4.PNG)<br>
+
+Análise: A maioria das pessoas requisitam ao menos uma doação, poucos requisitam mais de uma.<br>
+
+Histograma do número de requisições de ajuda das pessoas
+![Gráfico 5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/5.PNG)<br>
+
+Análise: Menos da metade das pessoas requisitam ajudar outros com necessidade.<br>
+
+Porcentagem de itens doados por categoria
+![Gráfico 6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/6.PNG)<br>
+
+Análise: Alimentícios, Automotivos e utilitários são as doações mais comuns. Brinquedos são as menos comuns.<br>
+
+Porcentagem de necessidades por categoria
+![Gráfico 7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/7.PNG)<br>
+
+Análise: Alimentícios e eletrônicos são as maiores necessidades das pessoas. Vestimentas e utensílios são os menos pedidos.<br>
+
+>## Marco de Entrega 03 em: 04/11/2019<br>
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 #### a) Pontos Chave do MINI-MUNDO
