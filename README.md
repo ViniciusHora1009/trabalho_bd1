@@ -542,48 +542,56 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 #### 9.11 Relatórios e Gráficos
 ![Arquivo Jupyter com integração com o ElephantSQL e geração de relatórios em gráfico](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/jupyter.ipynb)<br>
 
-**Histograma do saldo das pessoas**
+**Histograma do saldo das pessoas**<br>
 
 ![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/1.PNG)<br>
 
 Análise: A maioria das pessoas têm pouco saldo, somente uma pequena parcela tem o suficiente para requisitar doações sem preocupação.<br>
 
-**Histograma do número de doações das pessoas**
+**Histograma do número de doações das pessoas**<br>
+
 ![Gráfico 2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/2.PNG)<br>
 
 Análise: A maioria doa pelo menos uma doação, poucos doam mais que isso.<br>
 
-**Histograma do número de necessidades das pessoas**
+**Histograma do número de necessidades das pessoas**<br>
+
 ![Gráfico 3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/3.PNG)<br>
 
 Análise: As pessoas que possuem necessidade são minoria comparadas as que não possuem. Essas pessoas possuem somente uma necessidade.<br>
 
-**Histograma do número de requisições de doação das pessoas**
+**Histograma do número de requisições de doação das pessoas**<br>
+
 ![Gráfico 4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/4.PNG)<br>
 
 Análise: A maioria das pessoas requisitam ao menos uma doação, poucos requisitam mais de uma.<br>
 
-**Histograma do número de requisições de ajuda das pessoas**
+**Histograma do número de requisições de ajuda das pessoas**<br>
+
 ![Gráfico 5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/5.PNG)<br>
 
 Análise: Menos da metade das pessoas requisitam ajudar outros com necessidade.<br>
 
-**Porcentagem de itens doados por categoria**
+**Porcentagem de itens doados por categoria**<br>
+
 ![Gráfico 6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/6.PNG)<br>
 
 Análise: Alimentícios, Automotivos e utilitários são as doações mais comuns. Brinquedos são as menos comuns.<br>
 
-**Porcentagem de necessidades por categoria**
+**Porcentagem de necessidades por categoria**<br>
+
 ![Gráfico 7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/7.PNG)<br>
 
 Análise: Alimentícios e eletrônicos são as maiores necessidades das pessoas. Vestimentas e utensílios são os menos pedidos.<br>
 
-**Gráfico do status das requisições de doações**
+**Gráfico do status das requisições de doações**<br>
+
 ![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/8.PNG)<br>
 
 Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
 
-**Gráfico do status das requisições de ajuda a necessitados**
+**Gráfico do status das requisições de ajuda a necessitados**<br>
+
 ![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.PNG)<br>
 
 Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
