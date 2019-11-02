@@ -183,7 +183,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzdC2vvJ6_o#scrollTo=lpJY9Sk3GGhc
+Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzdC2vvJ6_o
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 SELECT * FROM PESSOA;<br>
