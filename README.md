@@ -545,79 +545,53 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 
 ![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/1.PNG)<br>
 
-Análise: A maioria das pessoas têm pouco saldo, somente uma pequena parcela tem o suficiente para requisitar doações sem preocupação.<br>
-
 **Histograma do número de doações das pessoas**<br>
 
 ![Gráfico 2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/2.PNG)<br>
-
-Análise: A maioria doa pelo menos uma doação, poucos doam mais que isso.<br>
 
 **Histograma do número de necessidades das pessoas**<br>
 
 ![Gráfico 3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/3.PNG)<br>
 
-Análise: As pessoas que possuem necessidade são minoria comparadas as que não possuem. Essas pessoas possuem somente uma necessidade.<br>
-
 **Histograma do número de requisições de doação das pessoas**<br>
 
 ![Gráfico 4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/4.PNG)<br>
-
-Análise: A maioria das pessoas requisitam ao menos uma doação, poucos requisitam mais de uma.<br>
 
 **Histograma do número de requisições de ajuda das pessoas**<br>
 
 ![Gráfico 5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/5.PNG)<br>
 
-Análise: Menos da metade das pessoas requisitam ajudar outros com necessidade.<br>
-
 **Porcentagem de itens doados por categoria**<br>
 
 ![Gráfico 6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/6.PNG)<br>
-
-Análise: Alimentícios, Automotivos e utilitários são as doações mais comuns. Brinquedos são as menos comuns.<br>
 
 **Porcentagem de necessidades por categoria**<br>
 
 ![Gráfico 7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/7.PNG)<br>
 
-Análise: Alimentícios e eletrônicos são as maiores necessidades das pessoas. Vestimentas e utensílios são os menos pedidos.<br>
-
 **Gráfico da porcentagem do estado das doações**<br>
 
 ![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/8.PNG)<br>
-
-Análise: A maioria das doações são usadas, uma parte considerável está quebrada e poucas são novas.<br>
 
 **Gráfico do perfil dos doadores pela idade**<br>
 
 ![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/9.PNG)<br>
 
-Análise: Os maiores doares estão abaixo dos 30 anos, porém acima dessa faixa realizam um número de doações considerável também.<br>
-
 **Gráfico do status das requisições de doações**<br>
 
 ![Gráfico 10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/10.PNG)<br>
-
-Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
 
 **Gráfico do status das requisições de ajuda a necessitados**<br>
 
 ![Gráfico 11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/11.PNG)<br>
 
-Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
-
 **Gráfico da porcentagem do tipo de categoria mais requisitada em doações**<br>
 
 ![Gráfico 12](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/12.PNG)<br>
 
-Análise: A maior parte das requisições é em itens de eletrônicos, vestimentas e móveis.<br>
-
 **Gráfico da porcentagem do tipo de categoria mais requisitada de ajuda para necessidades**<br>
 
 ![Gráfico 13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/13.PNG)<br>
-
-Análise: A maioria das requisições de ajuda são de utensílios e um pouco menos para utilitários.<br>
 
 >## Marco de Entrega 03 em: 04/11/2019<br>
 
