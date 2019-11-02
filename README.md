@@ -19,7 +19,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Prot%C3%B3tipo/tela_doacao.PNG "Doação")<br>
-![Arquivo PDF do Protótipo Balsamiq feito para o sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Prototipo.pdf "App Doações")<br>
+![Arquivo PDF do Protótipo Balsamiq feito para o sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Prot%C3%B3tipo/Prototipo.pdf "App Doações")<br>
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
@@ -33,17 +33,17 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
  
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
-![Tabela de dados AppDoações Excel](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Tabela%20de%20dados.xlsx?raw=true "Tabela - AppDoações")<br>
-![Tabela de dados AppDoações Calc](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Tabela%20de%20dados.ods?raw=true "Tabela - AppDoações")
+![Tabela de dados AppDoações Excel](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Planilhas/Tabela%20de%20dados.xlsx?raw=true "Tabela - AppDoações")<br>
+![Tabela de dados AppDoações Calc](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Planilhas/Tabela%20de%20dados.ods?raw=true "Tabela - AppDoações")
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Conceitual/conceitual.png "Modelo Conceitual")
-![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual.brM3 "Modelo conceitual")<br>
+![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Conceitual/conceitual.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Conceitual/UML.png "Diagrama de classes")
-![Arquivo asta do diagrama de classes](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/appDoacoes.asta "Diagrama de classes")<br>   
+![Arquivo asta do diagrama de classes](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/UML/appDoacoes.asta "Diagrama de classes")<br>   
         
     
 #### 5.1 Validação do Modelo Conceitual
@@ -171,15 +171,15 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/L%C3%B3gico/logico.png "Modelo Lógico")
-![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logicobrM3 "Modelo físico")<br>
+![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/L%C3%B3gico/logico.brM3 "Modelo físico")<br>
 
 ### 7	MODELO FÍSICO<br>
-![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/fisico_atualizadov3.sql "Modelo físico")<br>
+![Arquivo SQL com modelo físico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/F%C3%ADsico/fisico_definitivo2.sql "Modelo físico")<br>
         
 >## Marco de Entrega 01 em: 07/10/2019<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-![Arquivo SQL com inserts](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/inserts.sql "Inserts aplicados")<br>
+![Arquivo SQL com inserts](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Insert/inserts.sql "Inserts aplicados")<br>
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
@@ -618,6 +618,8 @@ Análise: A maior parte das requisições é em itens de eletrônicos, vestiment
 ![Gráfico 13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/13.PNG)<br>
 
 Análise: A maioria das requisições de ajuda são de utensílios e um pouco menos para utilitários.<br>
+
+>## Marco de Entrega 03 em: 04/11/2019<br>
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 #### a) Pontos Chave do MINI-MUNDO
