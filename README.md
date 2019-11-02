@@ -18,7 +18,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
 ![Arquivo PDF da Documentação de requisitos](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Documenta%C3%A7%C3%A3o%20de%20Requisitos.pdf)<br>
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/tela_doacao.PNG "Doação")<br>
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Prot%C3%B3tipo/tela_doacao.PNG "Doação")<br>
 ![Arquivo PDF do Protótipo Balsamiq feito para o sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Prototipo.pdf "App Doações")<br>
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
@@ -38,11 +38,11 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO        
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/conceitual.png "Modelo Conceitual")
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Conceitual/conceitual.png "Modelo Conceitual")
 ![Arquivo brM3 com modelo conceitual do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/conceitual.brM3 "Modelo conceitual")<br>
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/UML.png "Diagrama de classes")
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Conceitual/UML.png "Diagrama de classes")
 ![Arquivo asta do diagrama de classes](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/appDoacoes.asta "Diagrama de classes")<br>   
         
     
@@ -170,7 +170,7 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     
 
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/logico.png "Modelo Conceitual")
+![Alt text](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/L%C3%B3gico/logico.png "Modelo Lógico")
 ![Arquivo brM3 com modelo lógico do sistema](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/logicobrM3 "Modelo físico")<br>
 
 ### 7	MODELO FÍSICO<br>
@@ -187,107 +187,107 @@ Link do Colab: https://colab.research.google.com/drive/1dCpHkfv8w8GYIwHhmsopFEzd
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 SELECT * FROM PESSOA;<br>
-![9.1-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-1.PNG "Tabela Pessoa")<br>
+![9.1-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-1.PNG "Tabela Pessoa")<br>
 
 SELECT * FROM AVALIACAO_USUARIO;<br>
-![9.1-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-2.PNG "Tabela Avaliação Usuário")<br>
+![9.1-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-2.PNG "Tabela Avaliação Usuário")<br>
 
 SELECT * FROM ONG;<br>
-![9.1-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-3.PNG "Tabela Ong")<br>
+![9.1-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-3.PNG "Tabela Ong")<br>
 
 SELECT * FROM CATEGORIA;<br>
-![9.1-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-4.PNG "Tabela Categoria")<br>
+![9.1-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-4.PNG "Tabela Categoria")<br>
 
 SELECT * FROM ITEM_DOACAO;<br>
-![9.1-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-5.PNG "Tabela Item Doação")<br>
+![9.1-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-5.PNG "Tabela Item Doação")<br>
 
 SELECT * FROM FOTO;<br>
-![9.1-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-6.PNG "Tabela Foto")<br>
+![9.1-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-6.PNG "Tabela Foto")<br>
 
 SELECT * FROM STATUS_REQUISICAO;<br>
-![9.1-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-7.PNG "Tabela Status Requisição")<br>
+![9.1-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-7.PNG "Tabela Status Requisição")<br>
 
 SELECT * FROM ESTADO_ITEM;<br>
-![9.1-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-8.PNG "Tabela Estado Item")<br>
+![9.1-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-8.PNG "Tabela Estado Item")<br>
 
 SELECT * FROM STATUS_REQ_NECESSIDADE;<br>
-![9.1-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-9.PNG "Tabela Status Req Necessidade")<br>
+![9.1-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-9.PNG "Tabela Status Req Necessidade")<br>
 
 SELECT * FROM MENSAGEM_REQUISICAO;<br>
-![9.1-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-10.PNG "Tabela Mensagem Requisição")<br>
+![9.1-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-10.PNG "Tabela Mensagem Requisição")<br>
 
 SELECT * FROM STATUS_MENSAGEM;<br>
-![9.1-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-11.PNG "Tabela Status Mensagem")<br>
+![9.1-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-11.PNG "Tabela Status Mensagem")<br>
 
 SELECT * FROM STATUS_MENSAGEM_NEC;<br>
-![9.1-12](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-12.PNG "Tabela Status Mensagem Nec")<br>
+![9.1-12](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-12.PNG "Tabela Status Mensagem Nec")<br>
 
 SELECT * FROM NECESSIDADE;<br>
-![9.1-13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-13.PNG "Tabela Necessidade")<br>
+![9.1-13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-13.PNG "Tabela Necessidade")<br>
 
 SELECT * FROM FOTO_NECESSIDADE;<br>
-![9.1-14](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-14.PNG "Tabela Foto Necessidade")<br>
+![9.1-14](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-14.PNG "Tabela Foto Necessidade")<br>
 
 SELECT * FROM MENSAGEM_NECESSIDADE;<br>
-![9.1-15](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-15.PNG "Tabela Mensagem Necessidade")<br>
+![9.1-15](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-15.PNG "Tabela Mensagem Necessidade")<br>
 
 SELECT * FROM REQUISITA_DOACAO_REQUISITA;<br>
-![9.1-16](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-16.PNG "Tabela Requisita Doação Requisita")<br>
+![9.1-16](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-16.PNG "Tabela Requisita Doação Requisita")<br>
 
 SELECT * FROM INTO REQUISICAO_AJUDA_SUPRE_PESSOA_ONG_NECESSIDADE;<br>
-![9.1-17](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-17.PNG "Tabela Requisição Ajuda Supre Pessoa Ong Necessidade")<br>
+![9.1-17](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-17.PNG "Tabela Requisição Ajuda Supre Pessoa Ong Necessidade")<br>
 
 SELECT * FROM EXPOE_PESSOA_NECESSIDADE_ONG;<br>
-![9.1-18](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-18.PNG "Tabela Expoe Pessoa Necessidade")<br>
+![9.1-18](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-18.PNG "Tabela Expoe Pessoa Necessidade")<br>
 
 SELECT * FROM POSSIBILITA;<br>
-![9.1-19](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-19.PNG "Tabela Possibilita")<br>
+![9.1-19](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-19.PNG "Tabela Possibilita")<br>
 
 SELECT * FROM POSSIBILITA_AJUDA;<br>
-![9.1-20](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-20.PNG "Tabela Possibilita Ajuda")<br>
+![9.1-20](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-20.PNG "Tabela Possibilita Ajuda")<br>
 
 SELECT * FROM ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG;<br>
-![9.1-21](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.1-21.PNG "Tabela Envia Pessoa Mensagem Necessidade Ong")<br>
+![9.1-21](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.1-21.PNG "Tabela Envia Pessoa Mensagem Necessidade Ong")<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 SELECT * FROM ong WHERE cidade = 'Cariacica';
-![9.2-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-1.PNG)<br>
+![9.2-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-1.PNG)<br>
 
 SELECT * FROM avaliacao_usuario WHERE nota = 5;
-![9.2-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-2.PNG)<br>
+![9.2-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-2.PNG)<br>
 
 SELECT * FROM categoria WHERE valor_medio < 200;
-![9.2-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-3.PNG)<br>
+![9.2-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-3.PNG)<br>
 
 SELECT * FROM pessoa WHERE saldo > 500;
-![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.2-4.PNG)<br>
+![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-4.PNG)<br>
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
 SELECT * FROM item_doacao WHERE estado = 'ES' AND cidade = 'Vitória' AND bairro != 'Estrelinha';
-![9.3-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-1.PNG)<br>
+![9.3-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-1.PNG)<br>
 
 SELECT * FROM item_doacao WHERE estado = 'ES' OR estado = 'RJ';
-![9.3-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-2.PNG)<br>
+![9.3-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-2.PNG)<br>
 
 SELECT * FROM item_doacao WHERE estado = 'ES' AND (cidade = 'Vitória' OR  cidade = 'Vila Velha');
-![9.3-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-3.PNG)<br>
+![9.3-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-3.PNG)<br>
 
 SELECT * FROM requisicao_ajuda_supre_pessoa_ong_necessidade WHERE fk_pessoa_id_pessoa IS NOT null;
-![9.3-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-4.PNG)<br>
+![9.3-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-4.PNG)<br>
 
 SELECT * FROM PESSOA WHERE saldo >= 50 AND saldo <= 100 ORDER BY saldo;
-![9.3-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-5.PNG)<br>
+![9.3-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-5.PNG)<br>
 
 SELECT * FROM PESSOA WHERE saldo = 0;
-![9.3-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-6.PNG)<br>
+![9.3-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-6.PNG)<br>
 
 SELECT * FROM PESSOA WHERE saldo > 500 ORDER BY saldo;
-![9.3-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-7.PNG)<br>
+![9.3-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-7.PNG)<br>
 
 SELECT * FROM CATEGORIA_NECESSIDADE WHERE valor_medio < 350 ORDER BY valor_medio;
-![9.3-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.3-8.PNG)<br>
+![9.3-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-8.PNG)<br>
 
 ALTER TABLE categoria RENAME nome TO "nome_categoria";<br>
 ALTER TABLE categoria_necessidade RENAME nome TO nome_categoria;<br>
@@ -296,63 +296,63 @@ ALTER TABLE estado_item RENAME nome TO condicao;<br>
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
 SELECT * FROM pessoa WHERE nome LIKE 'J%';
-![9.4-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-1.PNG)<br>
+![9.4-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-1.PNG)<br>
 
 SELECT * FROM pessoa WHERE nome LIKE '%a';
-![9.4-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-2.PNG)<br>
+![9.4-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-2.PNG)<br>
 
 SELECT * FROM pessoa WHERE nome LIKE '%Car%';
-![9.4-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-3.PNG)<br>
+![9.4-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-3.PNG)<br>
 
 SELECT * FROM mensagem_requisicao WHERE conteudo LIKE '%?';
-![9.4-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-4.PNG)<br>
+![9.4-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-4.PNG)<br>
 
 SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';
-![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-5.PNG)<br>
+![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-5.PNG)<br>
 
 SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';
-![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-6.PNG)<br>
+![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-6.PNG)<br>
 
 SELECT * FROM item_doacao WHERE descricao LIKE '%usad%';
-![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-7.PNG)<br>
+![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-7.PNG)<br>
 
 SELECT * FROM ONG WHERE nome ILIKE 'f%';
-![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-8.PNG)<br>
+![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-8.PNG)<br>
 
 SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';
-![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-9.PNG)<br>
+![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-9.PNG)<br>
 
 SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;
-![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.5-10.PNG)<br>
+![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-10.PNG)<br>
 
 SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nascimento))) FROM pessoa;
-![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.6-11.PNG)<br>
+![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 UPDATE pessoa SET email = 'joser12@gmail.com' WHERE nome = 'José Ricardo';<br>
 SELECT * FROM pessoa WHERE nome = 'José Ricardo';
-![9.5-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-1.PNG)<br>
+![9.5-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-1.PNG)<br>
 
 UPDATE ong SET num_contato = 33589741 WHERE nome = 'Fundação Pedro Nolasco';<br>
 SELECT * FROM ong WHERE nome = 'Fundação Pedro Nolasco';
-![9.5-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-2.PNG)<br>
+![9.5-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-2.PNG)<br>
 
 UPDATE ong SET email = 'projvidadigna@hotmail.com' WHERE nome = 'Projeto Vida Digna';<br>
 SELECT * FROM ong WHERE nome = 'Projeto Vida Digna';
-![9.5-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-3.PNG)<br>
+![9.5-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-3.PNG)<br>
 
 UPDATE ong SET email = 'lutapelofuturo@outlook.com' WHERE nome = 'Luta pelo Futuro';<br>
 SELECT * FROM ong WHERE nome = 'Luta pelo Futuro';
-![9.5-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-4.PNG)<br>
+![9.5-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-4.PNG)<br>
 
 UPDATE pessoa SET email = 'emailapp@gmail.com' WHERE nome = 'Heberson Machado';<br>
 SELECT * FROM pessoa WHERE nome = 'Heberson Machado';
-![9.5-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-5.PNG)<br>
+![9.5-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-5.PNG)<br>
 
 UPDATE ong SET email = 'direitos.dos.surdos@gmail.com' WHERE nome = 'Direitos dos Surdos';<br>
 SELECT * FROM ong WHERE nome = 'Direitos dos Surdos';
-![9.5-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-5-6.PNG)<br>
+![9.5-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.5-6.PNG)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
 
@@ -413,8 +413,8 @@ MENSAGEM_NECESSIDADE.ID_MENSAGEM,<br>
 STATUS_MENSAGEM_NEC.ID_STATUS,<br>
 STATUS_REQ_NECESSIDADE.ID_MENSAGEM_STATUS<br>
 ORDER BY PESSOA.ID_PESSOA;<br>
-![9.6-1.1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-1.1.PNG)
-![9.6-1.2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-1.2.PNG)<br>
+![9.6-1.1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-1.1.PNG)
+![9.6-1.2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-1.2.PNG)<br>
 
 SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",<br>
 PESSOA.NOME,<br>
@@ -422,7 +422,7 @@ AVG(NOTA) AS "MEDIA"<br>
 FROM PESSOA<br>
 INNER JOIN AVALIACAO_USUARIO ON(PESSOA.ID_PESSOA = AVALIACAO_USUARIO.FK_PESSOA_ID_PESSOA_)<br>
 GROUP BY PESSOA.ID_PESSOA;<br>
-![9.6-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-2.PNG)<br>
+![9.6-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-2.PNG)<br>
 
 SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",<br>
 PESSOA.NOME,<br>
@@ -443,7 +443,7 @@ INNER JOIN FOTO ON(ITEM_DOACAO.ID_DOACAO = FOTO.FK_ITEM_DOACAO_ID_DOACAO)<br>
 INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)<br>
 GROUP BY PESSOA.ID_PESSOA,ITEM_DOACAO.ID_DOACAO,FOTO.ID_FOTO,CATEGORIA.ID_CATEGORIA,ESTADO_ITEM.ID_ESTADO<br>
 ORDER BY PESSOA.ID_PESSOA;<br>
-![9.6-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-3.PNG)<br>
+![9.6-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-3.PNG)<br>
 
 SELECT ONG.ID_ONG,<br>
 ONG.NOME,<br>
@@ -463,7 +463,7 @@ INNER JOIN FOTO_NECESSIDADE ON(NECESSIDADE.ID_NECESSIDADE = FOTO_NECESSIDADE.FK_
 INNER JOIN CATEGORIA_NECESSIDADE ON(NECESSIDADE.FK_CATEGORIA_NECESSIDADE_ID_CATEGORIA = CATEGORIA_NECESSIDADE.ID_CATEGORIA)<br>
 GROUP BY ONG.ID_ONG, NECESSIDADE.ID_NECESSIDADE, FOTO_NECESSIDADE.ID_FOTO, CATEGORIA_NECESSIDADE.ID_CATEGORIA<br>
 ORDER BY ONG.ID_ONG;<br>
-![9.6-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-4.PNG)<br>
+![9.6-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-4.PNG)<br>
 
 SELECT PESSOA.ID_PESSOA,<br>
 PESSOA.NOME,<br>
@@ -483,7 +483,7 @@ INNER JOIN FOTO_NECESSIDADE ON(NECESSIDADE.ID_NECESSIDADE = FOTO_NECESSIDADE.FK_
 INNER JOIN CATEGORIA_NECESSIDADE ON(NECESSIDADE.FK_CATEGORIA_NECESSIDADE_ID_CATEGORIA = CATEGORIA_NECESSIDADE.ID_CATEGORIA)<br>
 GROUP BY PESSOA.ID_PESSOA, NECESSIDADE.ID_NECESSIDADE, FOTO_NECESSIDADE.ID_FOTO, CATEGORIA_NECESSIDADE.ID_CATEGORIA<br>
 ORDER BY PESSOA.ID_PESSOA<br>
-![9.6-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-5.PNG)<br>
+![9.6-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-5.PNG)<br>
 
 SELECT PESSOA.ID_PESSOA,<br>
 PESSOA.NOME,<br>
@@ -506,7 +506,7 @@ INNER JOIN FOTO ON(ITEM_DOACAO.ID_DOACAO = FOTO.FK_ITEM_DOACAO_ID_DOACAO)<br>
 INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)<br>
 GROUP BY PESSOA.ID_PESSOA, ITEM_DOACAO.ID_DOACAO, FOTO.ID_FOTO, CATEGORIA.ID_CATEGORIA, ESTADO_ITEM.ID_ESTADO, REQUISITA_DOACAO_REQUISITA.ID, STATUS_REQUISICAO.ID_STATUS<br>
 ORDER BY PESSOA.ID_PESSOA<br>
-![9.6-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-7.PNG)<br>
+![9.6-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-7.PNG)<br>
 
 SELECT PESSOA.ID_PESSOA,<br>
 PESSOA.NOME,<br>
@@ -526,7 +526,7 @@ INNER JOIN STATUS_MENSAGEM ON(MENSAGEM_REQUISICAO.FK_STATUS_MENSAGEM_ID_MENSAGEM
 INNER JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)<br>
 GROUP BY PESSOA.ID_PESSOA, ITEM_DOACAO.ID_DOACAO,REQUISITA_DOACAO_REQUISITA.ID, STATUS_MENSAGEM.ID_MENSAGEM_STATUS, MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
-![9.6-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9-6-8.PNG)<br>
+![9.6-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.6-8.PNG)<br>
 
 >## Marco de Entrega 02 em: 21/10/2019<br>
 
@@ -540,61 +540,84 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 
 
 #### 9.11 Relatórios e Gráficos
-![Arquivo Jupyter com integração com o ElephantSQL e geração de relatórios em gráfico](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/jupyter.ipynb)<br>
 
 **Histograma do saldo das pessoas**<br>
 
-![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/1.PNG)<br>
+![Gráfico 1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/1.PNG)<br>
 
 Análise: A maioria das pessoas têm pouco saldo, somente uma pequena parcela tem o suficiente para requisitar doações sem preocupação.<br>
 
 **Histograma do número de doações das pessoas**<br>
 
-![Gráfico 2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/2.PNG)<br>
+![Gráfico 2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/2.PNG)<br>
 
 Análise: A maioria doa pelo menos uma doação, poucos doam mais que isso.<br>
 
 **Histograma do número de necessidades das pessoas**<br>
 
-![Gráfico 3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/3.PNG)<br>
+![Gráfico 3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/3.PNG)<br>
 
 Análise: As pessoas que possuem necessidade são minoria comparadas as que não possuem. Essas pessoas possuem somente uma necessidade.<br>
 
 **Histograma do número de requisições de doação das pessoas**<br>
 
-![Gráfico 4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/4.PNG)<br>
+![Gráfico 4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/4.PNG)<br>
 
 Análise: A maioria das pessoas requisitam ao menos uma doação, poucos requisitam mais de uma.<br>
 
 **Histograma do número de requisições de ajuda das pessoas**<br>
 
-![Gráfico 5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/5.PNG)<br>
+![Gráfico 5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/5.PNG)<br>
 
 Análise: Menos da metade das pessoas requisitam ajudar outros com necessidade.<br>
 
 **Porcentagem de itens doados por categoria**<br>
 
-![Gráfico 6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/6.PNG)<br>
+![Gráfico 6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/6.PNG)<br>
 
 Análise: Alimentícios, Automotivos e utilitários são as doações mais comuns. Brinquedos são as menos comuns.<br>
 
 **Porcentagem de necessidades por categoria**<br>
 
-![Gráfico 7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/7.PNG)<br>
+![Gráfico 7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/7.PNG)<br>
 
 Análise: Alimentícios e eletrônicos são as maiores necessidades das pessoas. Vestimentas e utensílios são os menos pedidos.<br>
 
+**Gráfico da porcentagem do estado das doações**<br>
+
+![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/8.PNG)<br>
+
+Análise: A maioria das doações são usadas, uma parte considerável está quebrada e poucas são novas.<br>
+
+**Gráfico do perfil dos doadores pela idade**<br>
+
+![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/9.PNG)<br>
+
+Análise: Os maiores doares estão abaixo dos 30 anos, porém acima dessa faixa realizam um número de doações considerável também.<br>
+
 **Gráfico do status das requisições de doações**<br>
 
-![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/8.PNG)<br>
+![Gráfico 10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/10.PNG)<br>
 
 Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
 
 **Gráfico do status das requisições de ajuda a necessitados**<br>
 
-![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.PNG)<br>
+![Gráfico 11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/11.PNG)<br>
 
 Análise: A maioria das requisições se encontra em andamento. Minora foi finalizada.<br>
+
+**Gráfico da porcentagem do tipo de categoria mais requisitada em doações**<br>
+
+![Gráfico 12](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/12.PNG)<br>
+
+Análise: A maior parte das requisições é em itens de eletrônicos, vestimentas e móveis.<br>
+
+**Gráfico da porcentagem do tipo de categoria mais requisitada de ajuda para necessidades**<br>
+
+![Gráfico 13](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/13.PNG)<br>
+
+Análise: A maioria das requisições de ajuda são de utensílios e um pouco menos para utilitários.<br>
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 #### a) Pontos Chave do MINI-MUNDO
