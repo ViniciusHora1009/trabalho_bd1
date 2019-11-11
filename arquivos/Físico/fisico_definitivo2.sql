@@ -24,10 +24,6 @@ CREATE TABLE item_doacao (
     ID_doacao INTEGER PRIMARY KEY,
     descricao VARCHAR(1000),
     longitude DECIMAL(50),
-    bairro VARCHAR(255),
-    estado VARCHAR(255),
-    cidade VARCHAR(255),
-    rua VARCHAR(255),
     fk_pessoa_ID_pessoa INTEGER,
     fk_categoria_ID_categoria INTEGER,
     fk_estado_item_ID_estado INTEGER
@@ -84,10 +80,6 @@ CREATE TABLE ONG (
     nome VARCHAR(255),
     ID_ong INTEGER PRIMARY KEY,
     longitude DECIMAL(50),
-    rua VARCHAR(255),
-    bairro VARCHAR(255),
-    cidade VARCHAR(255),
-    estado VARCHAR(255)
 );
 
 CREATE TABLE necessidade (
@@ -95,10 +87,6 @@ CREATE TABLE necessidade (
     ID_necessidade INTEGER PRIMARY KEY,
     titulo VARCHAR(255),
     valor INTEGER,
-    rua VARCHAR(255),
-    bairro VARCHAR(255),
-    cidade VARCHAR(255),
-    estado VARCHAR(255),
     latitude DECIMAL(50),
     longitude DECIMAL(50),
     fk_categoria_necessidade_ID_categoria INTEGER
