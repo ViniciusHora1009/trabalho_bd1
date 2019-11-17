@@ -251,30 +251,42 @@ SELECT * FROM ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG;<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-SELECT * FROM avaliacao_usuario WHERE nota = 5;
+SELECT * FROM ITEM_DOACAO WHERE FK_CATEGORIA_ID_CATEGORIA = 1;<br>
+![9.2-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-1.PNG)<br>
+
+SELECT * FROM avaliacao_usuario WHERE nota = 5;<br>
 ![9.2-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-2.PNG)<br>
 
-SELECT * FROM categoria WHERE valor_medio < 200;
+SELECT * FROM categoria WHERE valor_medio < 200;<br>
 ![9.2-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-3.PNG)<br>
 
-SELECT * FROM pessoa WHERE saldo > 500;
+SELECT * FROM pessoa WHERE saldo > 500;<br>
 ![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-4.PNG)<br>
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
-SELECT * FROM requisicao_ajuda_supre_pessoa_ong_necessidade WHERE fk_pessoa_id_pessoa IS NOT null;
+SELECT * FROM item_doacao WHERE latitude > 0.54e2;<br>
+![9.3-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-1.PNG)<br>
+
+SELECT * FROM item_doacao WHERE latitude > 0.54e2 AND longitude < -0.34e2;<br>
+![9.3-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-2.PNG)<br>
+
+SELECT * FROM item_doacao WHERE longitude = -0.34e2 OR latitude = 0.1e1;<br>
+![9.3-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-3.PNG)<br>
+
+SELECT * FROM requisicao_ajuda_supre_pessoa_ong_necessidade WHERE fk_pessoa_id_pessoa IS NOT null;<br>
 ![9.3-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-4.PNG)<br>
 
-SELECT * FROM PESSOA WHERE saldo >= 50 AND saldo <= 100 ORDER BY saldo;
+SELECT * FROM PESSOA WHERE saldo >= 50 AND saldo <= 100 ORDER BY saldo;<br>
 ![9.3-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-5.PNG)<br>
 
-SELECT * FROM PESSOA WHERE saldo = 0;
+SELECT * FROM PESSOA WHERE saldo = 0;<br>
 ![9.3-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-6.PNG)<br>
 
-SELECT * FROM PESSOA WHERE saldo > 500 ORDER BY saldo;
+SELECT * FROM PESSOA WHERE saldo > 500 ORDER BY saldo;<br>
 ![9.3-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-7.PNG)<br>
 
-SELECT * FROM CATEGORIA_NECESSIDADE WHERE valor_medio < 350 ORDER BY valor_medio;
+SELECT * FROM CATEGORIA_NECESSIDADE WHERE valor_medio < 350 ORDER BY valor_medio;<br>
 ![9.3-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-8.PNG)<br>
 
 ALTER TABLE categoria RENAME nome TO "nome_categoria";<br>
@@ -283,37 +295,37 @@ ALTER TABLE estado_item RENAME nome TO condicao;<br>
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
-SELECT * FROM pessoa WHERE nome LIKE 'J%';
+SELECT * FROM pessoa WHERE nome LIKE 'J%';<br>
 ![9.4-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-1.PNG)<br>
 
-SELECT * FROM pessoa WHERE nome LIKE '%a';
+SELECT * FROM pessoa WHERE nome LIKE '%a';<br>
 ![9.4-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-2.PNG)<br>
 
-SELECT * FROM pessoa WHERE nome LIKE '%Car%';
+SELECT * FROM pessoa WHERE nome LIKE '%Car%';<br>
 ![9.4-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-3.PNG)<br>
 
-SELECT * FROM mensagem_requisicao WHERE conteudo LIKE '%?';
+SELECT * FROM mensagem_requisicao WHERE conteudo LIKE '%?';<br>
 ![9.4-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-4.PNG)<br>
 
-SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';
+SELECT * FROM mensagem_necessidade WHERE conteudo LIKE '%?';<br>
 ![9.4-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-5.PNG)<br>
 
-SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';
+SELECT * FROM item_doacao WHERE titulo LIKE '%velh%';<br>
 ![9.4-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-6.PNG)<br>
 
-SELECT * FROM item_doacao WHERE descricao LIKE '%usad%';
+SELECT * FROM item_doacao WHERE descricao LIKE '%usad%';<br>
 ![9.4-7](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-7.PNG)<br>
 
-SELECT * FROM ONG WHERE nome ILIKE 'f%';
+SELECT * FROM ONG WHERE nome ILIKE 'f%';<br>
 ![9.4-8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-8.PNG)<br>
 
-SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';
+SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';<br>
 ![9.4-9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/9.4-9.PNG)<br>
 
-SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;
+SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;<br>
 ![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-10.PNG)<br>
 
-SELECT nome, CURRENT_DATE, data_nascimento, EXTRACT (YEAR FROM AGE(current_date, data_nascimento)) AS IDADE FROM pessoa; 
+SELECT nome, CURRENT_DATE, data_nascimento, EXTRACT (YEAR FROM AGE(current_date, data_nascimento)) AS IDADE FROM pessoa;<br>
 ![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
