@@ -519,13 +519,73 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 >## Marco de Entrega 02 em: 21/10/2019<br>
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+
+SELECT fk_categoria_id_categoria FROM item_doacao GROUP BY fk_categoria_id_categoria;<br>
+![9.7-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-1.PNG)<br>
+
+SELECT fk_categoria_id_categoria, count(*) FROM item_doacao GROUP BY fk_categoria_id_categoria;<br>
+![9.7-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-2.PNG)<br>
+
+SELECT nome, saldo FROM pessoa GROUP BY nome, saldo HAVING saldo > 500;<br>
+![9.7-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-3.PNG)<br>
+
+SELECT nota, COUNT(*) FROM avaliacao_usuario GROUP BY nota HAVING nota > 3;<br>
+![9.7-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-4.PNG)<br>
+
+SELECT fk_estado_item_id_estado, count(*) FROM item_doacao GROUP BY fk_estado_item_id_estado;<br>
+![9.7-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-6.PNG)<br>
+
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+
+SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",
+PESSOA.NOME,
+AVG(NOTA) AS "MEDIA"
+FROM AVALIACAO_USUARIO
+RIGHT JOIN PESSOA ON(PESSOA.ID_PESSOA = AVALIACAO_USUARIO.FK_PESSOA_ID_PESSOA_)
+GROUP BY PESSOA.ID_PESSOA<br>
+![9.8-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.8-1.PNG)<br>
+
+SELECT PESSOA.ID_PESSOA AS "ID DO USUÁRIO",
+PESSOA.NOME AS "NOME PESSOA",
+ITEM_DOACAO.ID_DOACAO AS "ID DA DOAÇÃO",
+ITEM_DOACAO.TITULO as "OBJETO",
+CATEGORIA.NOME AS "TIPO",
+CATEGORIA.VALOR_MEDIO AS "VALOR",
+ESTADO_ITEM.NOME AS "ESTADO"
+FROM PESSOA
+LEFT JOIN ITEM_DOACAO ON(PESSOA.ID_PESSOA = ITEM_DOACAO.FK_PESSOA_ID_PESSOA)
+LEFT JOIN CATEGORIA ON(ITEM_DOACAO.FK_CATEGORIA_ID_CATEGORIA = CATEGORIA.ID_CATEGORIA)
+LEFT JOIN ESTADO_ITEM ON(ITEM_DOACAO.FK_ESTADO_ITEM_ID_ESTADO = ESTADO_ITEM.ID_ESTADO)
+GROUP BY PESSOA.ID_PESSOA, ITEM_DOACAO.ID_DOACAO, CATEGORIA.NOME, CATEGORIA.VALOR_MEDIO, ESTADO_ITEM.NOME
+ORDER BY PESSOA.ID_PESSOA<br>
+![9.8-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.8-2.PNG)<br>
+
+SELECT 	status_mensagem.nome AS "status",
+mensagem_requisicao.id_mensagem,
+mensagem_requisicao.conteudo,
+pessoa.nome AS "remetente"
+FROM mensagem_requisicao
+RIGHT JOIN status_mensagem ON (mensagem_requisicao.fk_status_mensagem_id_mensagem_status = 
+status_mensagem.id_mensagem_status)
+LEFT JOIN pessoa ON (mensagem_requisicao.fk_pessoa_id_pessoa = pessoa.id_pessoa)
+ORDER BY id_mensagem<br>
+![9.8-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.8-3.PNG)<br>
+
+SELECT ong.id_ong,
+ong.nome,
+necessidade.id_necessidade,
+necessidade.descricao
+FROM expoe_pessoa_necessidade_ong RIGHT JOIN necessidade ON (expoe_pessoa_necessidade_ong.fk_necessidade_id_necessidade = necessidade.id_necessidade)
+RIGHT JOIN ong ON (expoe_pessoa_necessidade_ong.fk_ong_id_ong = ong.id_ong)
+ORDER BY id_ong<br>
+![9.8-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.8-4.PNG)<br>
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
+SELECT * FROM item_doacao WHERE fk_categoria_id_categoria IN (SELECT fk_categoria_id_categoria FROM item_doacao WHERE fk_categoria_id_categoria  <> 3);<br>
+![9.10-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.10-2.PNG)<br>
 
 #### 9.11 Relatórios e Gráficos
 
