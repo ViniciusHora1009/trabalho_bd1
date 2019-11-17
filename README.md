@@ -573,10 +573,6 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 
 ![Gráfico 8](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/8.PNG)<br>
 
-**Gráfico do perfil dos doadores pela idade**<br>
-
-![Gráfico 9](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/9.PNG)<br>
-
 **Gráfico do status das requisições de doações**<br>
 
 ![Gráfico 10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Gr%C3%A1ficos/10.PNG)<br>
