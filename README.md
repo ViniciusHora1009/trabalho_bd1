@@ -544,6 +544,9 @@ SELECT nome, saldo FROM pessoa GROUP BY nome, saldo HAVING saldo > 500;<br>
 SELECT nota, COUNT(*) FROM avaliacao_usuario GROUP BY nota HAVING nota > 3;<br>
 ![9.7-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-4.PNG)<br>
 
+SELECT latitude, count(*) FROM item_doacao GROUP BY latitude;<br>
+![9.7-5](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-5.PNG)<br>
+
 SELECT fk_estado_item_id_estado, count(*) FROM item_doacao GROUP BY fk_estado_item_id_estado;<br>
 ![9.7-6](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.7-6.PNG)<br>
 
