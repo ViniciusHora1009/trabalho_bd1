@@ -601,13 +601,15 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 #### --> Tempo de apresentação 10 minutos
 
 
-### 11 Backup completo do banco de dados postgres 
-    a) deve ser realizado no formato "backup" 
-        (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
-    b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
-    c) informar aqui o grupo de alunos/dupla que realizou o teste.
+### 11 Backup completo do banco de dados postgres
+![Arquivo backup com restauração do banco](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Backup/appdoacoes.backup "Backup do banco")<br>
 
->## Marco de Entrega 04 em:<br>
+Validador por:<br>
+    [ContrateiServiços]: [André, Mayke, Bianca]<br>
+    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>
+    
+
+>## Marco de Entrega 04 em: 18/11/2019<br>
 
 
 ### 12  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
