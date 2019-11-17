@@ -251,9 +251,6 @@ SELECT * FROM ENVIA_PESSOA_MENSAGEM_NECESSIDADE_ONG;<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-SELECT * FROM ong WHERE cidade = 'Cariacica';
-![9.2-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-1.PNG)<br>
-
 SELECT * FROM avaliacao_usuario WHERE nota = 5;
 ![9.2-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-2.PNG)<br>
 
@@ -264,15 +261,6 @@ SELECT * FROM pessoa WHERE saldo > 500;
 ![9.2-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.2-4.PNG)<br>
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-
-SELECT * FROM item_doacao WHERE estado = 'ES' AND cidade = 'Vitória' AND bairro != 'Estrelinha';
-![9.3-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-1.PNG)<br>
-
-SELECT * FROM item_doacao WHERE estado = 'ES' OR estado = 'RJ';
-![9.3-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-2.PNG)<br>
-
-SELECT * FROM item_doacao WHERE estado = 'ES' AND (cidade = 'Vitória' OR  cidade = 'Vila Velha');
-![9.3-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-3.PNG)<br>
 
 SELECT * FROM requisicao_ajuda_supre_pessoa_ong_necessidade WHERE fk_pessoa_id_pessoa IS NOT null;
 ![9.3-4](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.3-4.PNG)<br>
@@ -325,7 +313,7 @@ SELECT * FROM necessidade WHERE descricao ILIKE '%paciente%';
 SELECT nome, CURRENT_DATE, data_nascimento, (AGE(current_date, data_nascimento)) FROM pessoa;
 ![9.4-10](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-10.PNG)<br>
 
-SELECT nome, CURRENT_DATE, data_nascimento, ('year',(AGE(current_date, data_nascimento))) FROM pessoa;
+SELECT nome, CURRENT_DATE, data_nascimento, EXTRACT (YEAR FROM AGE(current_date, data_nascimento)) AS IDADE FROM pessoa; 
 ![9.4-11](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.4-11.PNG)<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
