@@ -603,9 +603,10 @@ ORDER BY MENSAGEM_REQUISICAO.ID_MENSAGEM<br>
 
 ### 11 Backup completo do banco de dados postgres
 ![Arquivo backup com restauração do banco](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Backup/appdoacoes.backup "Backup do banco")<br>
-    Validador por:<br>
-        [ContrateiServiços]: [André, Mayke, Bianca]<br>
-        [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>
+
+Validador por:<br>
+    [ContrateiServiços]: [André, Mayke, Bianca]<br>
+    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>
     
 
 >## Marco de Entrega 04 em: 18/11/2019<br>
