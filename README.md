@@ -25,12 +25,11 @@ A idéia proposta é de um sistema online de doações, que permita uma interaç
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > O sistema deverá gerar os seguintes relatórios:
-* Relatório que informe todas as necessidades já divulgadas no sistema por determinado usuário.
-* Relatório que informe todas as doações já realizadas no sistema por determinado usuário.
-* Relatório que informe todos os comentários realizados em cada doação já divulgada.
-* Relatório de usuários "pessoa" incluino as seguintes informações: ID do usuário, nome do usuário, número de contato do usuário, e-mail, cpf e data de nascimento.
-* Relatório de usuários "ONG" incluindo as seguintes informações: ID da ONG, nome da ONG, CNPJ da ONG, número de contato da ONG, e-mail e a longitude e latitude.
- 
+* Relatório que informe a frequência de doações dos usuário.
+* Relatório que informe a frequência de necessidades de usuários.
+* Relatório que informe a quantidade de doações concretizadas.
+* Relatório que informe a categoria das doações mais solicitadas.
+* Relatório que informe a categoria das necessidades mais ocorrentes.
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
 ![Tabela de dados AppDoações Excel](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Planilhas/Tabela%20de%20dados.xlsx?raw=true "Tabela - AppDoações")<br>
@@ -597,10 +596,24 @@ ORDER BY id_ong<br>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
 
+CREATE VIEW nome_e_cnpj_ong AS SELECT NOME,CPF FROM PESSOA;<br>
+SELECT * FROM nome_e_cel_pessoa;<br>
+![9.9-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.9-1.PNG)<br>
+
+CREATE VIEW nome_e_cnpj_ong AS SELECT NOME,CNPJ FROM ONG;<br>
+SELECT * FROM nome_e_cnpj_ong;<br>
+![9.9-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.9-2.PNG)<br>
+
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+SELECT * FROM pessoa WHERE cpf IN (SELECT cpf FROM pessoa WHERE AGE(current_date,data_nascimento) > AGE(current_date,'01-01-2001'));<br>
+![9.10-1](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.10-1.PNG)<br>
 
 SELECT * FROM item_doacao WHERE fk_categoria_id_categoria IN (SELECT fk_categoria_id_categoria FROM item_doacao WHERE fk_categoria_id_categoria  <> 3);<br>
 ![9.10-2](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.10-2.PNG)<br>
+
+SELECT * FROM MENSAGEM_REQUISICAO WHERE fk_STATUS_MENSAGEM_ID_MENSAGEM_STATUS IN (SELECT FK_STATUS_MENSAGEM_ID_MENSAGEM_STATUS FROM MENSAGEM_REQUISICAO WHERE FK_STATUS_MENSAGEM_ID_MENSAGEM_STATUS  =3);<br>
+![9.10-3](https://github.com/appdoacoes/trabalho_bd1/blob/master/images/Consultas/9.10-3.PNG)<br>
 
 #### 9.11 Relatórios e Gráficos
 
@@ -667,7 +680,7 @@ SELECT * FROM item_doacao WHERE fk_categoria_id_categoria IN (SELECT fk_categori
 ### 11 Backup completo do banco de dados postgres
 ![Arquivo backup com restauração do banco](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Backup/appdoacoes.backup "Backup do banco")<br>
 
-Validador por:<br>
+#### Validador por:<br>
     [ContrateiServiços]: [André, Mayke, Bianca]<br>
     [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>
     
