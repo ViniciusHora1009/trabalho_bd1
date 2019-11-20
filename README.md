@@ -683,8 +683,8 @@ Link da apresentação: https://docs.google.com/presentation/d/e/2PACX-1vSTc2DMT
 ![Arquivo backup com restauração do banco](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Backup/appdoacoes.backup "Backup do banco")<br>
 
 #### Validador por:<br>
-    [ContrateiServiços]: [André, Mayke, Bianca]<br>
-    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>   
+    [ContrateiServiços]: [André, Mayke, Bianca]
+    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]   
     
 >## Marco de Entrega 04 em: 18/11/2019<br>
 
