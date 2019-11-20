@@ -676,17 +676,17 @@ SELECT * FROM MENSAGEM_REQUISICAO WHERE fk_STATUS_MENSAGEM_ID_MENSAGEM_STATUS IN
 #### f) Relatórios e Gráficos mais importantes para o sistema (mínimo 5) 
 #### --> Tempo de apresentação 10 minutos
 
+![Apresentação final em PDF](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Apresenta%C3%A7%C3%A3o/PDFApresenta%C3%A7%C3%A3o.pdf "Apresentação Final")<br><br>
+Link da apresentação: https://docs.google.com/presentation/d/e/2PACX-1vSTc2DMTeAdz3AscIbwOJ9gF31-Y9XnDk5hGjsYHupZlGkPyck150LN1uVY9qJRm9TdgINnVTcgsg9Z/pub?start=false&loop=false&delayms=1000 
 
 ### 11 Backup completo do banco de dados postgres
 ![Arquivo backup com restauração do banco](https://github.com/appdoacoes/trabalho_bd1/blob/master/arquivos/Backup/appdoacoes.backup "Backup do banco")<br>
 
 #### Validador por:<br>
     [ContrateiServiços]: [André, Mayke, Bianca]<br>
-    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>
+    [BoraJogar]: [Renato, Kaio Fábio, Maxwell]<br>   
     
-
 >## Marco de Entrega 04 em: 18/11/2019<br>
-
 
 ### 12  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
 <comentario no git>
